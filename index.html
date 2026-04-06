@@ -547,7 +547,7 @@ svg.spark{overflow:visible}
         if(typeof __ep!=='undefined'&&typeof PROFILES!=='undefined'){Object.assign(PROFILES,__ep);}
         // Fallback: rebuild from _analysis on DATA entries
         if(typeof PROFILES!=='undefined'&&typeof DATA!=='undefined'){
-          DATA.forEach(function(d){if(!PROFILES[d.id]&&d._analysis){PROFILES[d.id]={name:(d.authors&&d.authors.first)||d.name||'',analysis:d._analysis};}});
+          DATA.forEach(function(d){if(!PROFILES[d.id]){var pr=d._profile||{};PROFILES[d.id]={name:pr.name||(d.authors&&d.authors.first)||d.name||'',name_zh:pr.name_zh||(d.authors&&d.authors.first_zh)||null,current_role:pr.current_role||d.note||'—',advisor:pr.advisor||'—',citations:pr.citations||'—',scholar:pr.scholar||null,ss_name:pr.ss_name||pr.name||(d.authors&&d.authors.first)||'',education:pr.education||'',industry:pr.industry||'—',top_venues:pr.top_venues||[],awards:pr.awards||['—'],rep_papers:pr.rep_papers||[d.name],special_tags:pr.special_tags||[],analysis:d._analysis||null};}});
         }
       }catch(e){console.warn('[saved_state] apply:',e);}
     }
@@ -5586,6 +5586,30 @@ var LOG_SK='embodied_scanlog';
   if (gistData.profiles) {
     Object.assign(PROFILES, gistData.profiles);
   }
+  // Auto-build missing PROFILES from framework data
+  DATA.forEach(function(d){
+    if(!PROFILES[d.id]){
+      const pr = d._profile || {};
+      PROFILES[d.id] = {
+        name: pr.name || (d.authors&&d.authors.first) || d.name || '',
+        name_zh: pr.name_zh || (d.authors&&d.authors.first_zh) || null,
+        birth_year: pr.birth_year || null,
+        current_role: pr.current_role || d.note || '—',
+        advisor: pr.advisor || '—',
+        citations: pr.citations || '—',
+        scholar: pr.scholar || null,
+        github_repo: pr.github_repo || null,
+        ss_name: pr.ss_name || pr.name || (d.authors&&d.authors.first) || '',
+        education: pr.education || '',
+        industry: pr.industry || '—',
+        top_venues: pr.top_venues || (d.tags||[]).filter(t=>/RSS|ICRA|CoRL|NeurIPS|ICLR|CVPR|IROS|ECCV|ICCV/.test(t)),
+        awards: pr.awards || ['—'],
+        rep_papers: pr.rep_papers || [d.name + (d.year?' ('+d.year+')':'')],
+        special_tags: pr.special_tags || [],
+        analysis: d._analysis || d.analysis || null
+      };
+    }
+  });
 
   // ── Priority 2: Fallback to window.storage / localStorage ──
   try{
@@ -5599,10 +5623,28 @@ var LOG_SK='embodied_scanlog';
       }
       const ids=new Set(DATA.map(d=>d.id));
       extras.forEach(x=>{if(!ids.has(x.id))DATA.push(x);});
-      // Rebuild PROFILES for scanned entries from their _analysis field
+      // Rebuild PROFILES for scanned entries from their data
       DATA.forEach(function(d){
-        if(!PROFILES[d.id]&&d._analysis){
-          PROFILES[d.id]={name:(d.authors&&d.authors.first)||d.name||'',analysis:d._analysis};
+        if(!PROFILES[d.id]){
+          const pr = d._profile || {};
+          PROFILES[d.id] = {
+            name: pr.name || (d.authors&&d.authors.first) || d.name || '',
+            name_zh: pr.name_zh || (d.authors&&d.authors.first_zh) || null,
+            birth_year: pr.birth_year || null,
+            current_role: pr.current_role || d.note || '—',
+            advisor: pr.advisor || '—',
+            citations: pr.citations || '—',
+            scholar: pr.scholar || null,
+            github_repo: pr.github_repo || null,
+            ss_name: pr.ss_name || pr.name || (d.authors&&d.authors.first) || '',
+            education: pr.education || '',
+            industry: pr.industry || '—',
+            top_venues: pr.top_venues || (d.tags||[]).filter(function(t){return /RSS|ICRA|CoRL|NeurIPS|ICLR|CVPR|IROS|ECCV|ICCV/.test(t);}),
+            awards: pr.awards || ['—'],
+            rep_papers: pr.rep_papers || [d.name + (d.year?' ('+d.year+')':'')],
+            special_tags: pr.special_tags || [],
+            analysis: d._analysis || d.analysis || null
+          };
         }
       });
     }
@@ -6193,7 +6235,7 @@ function renderAP(d){
       <div class="ap-author">
         <div class="ap-top"><div>
           <div class="ap-name">${d.authors?.first||'—'}${d.authors?.first_zh?` <span class="ap-name-zh">(${d.authors.first_zh})</span>`:''}</div>
-          <div class="ap-role">详细信息待补充</div>
+          <div class="ap-role" style="color:var(--tx3)">${d.note||('扫描发现 · '+(d.year||''))}</div>
         </div></div>
         ${allHtml}
       </div></div>`;
@@ -6594,7 +6636,7 @@ ${CRITERIA}
 优先级：2024-2025年新发布 > 更早期（同等质量下新work排前）。
 ${JSON_FORMAT}`;
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json',...(ANTHROPIC_API_KEY?{'x-api-key':ANTHROPIC_API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'}:{})},body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:2000,messages:[{role:'user',content:prompt}]})});
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json',...(ANTHROPIC_API_KEY?{'x-api-key':ANTHROPIC_API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'}:{})},body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:3000,messages:[{role:'user',content:prompt}]})});
     let body;try{body=await res.json();}catch(e){throw new Error(`HTTP ${res.status}`);}
     if(!res.ok) throw new Error(`HTTP ${res.status}: ${body?.error?.message||''}`);
     const block=(body.content||[]).find(c=>c.type==='text');
