@@ -8861,11 +8861,11 @@ _tianyanTimerInterval = setInterval(updateTianyanCountdown, 1000);
 updateTianyanCountdown();
 // Countdown is now inside the button, no separate div needed
 
-// Auto-scan on page load (delay 3s to let page settle)
-setTimeout(function() {
-  tianyanLog('页面加载，天眼Agent 自动启动', 'var(--tx3)');
-  tianyanRunNow();
-}, 3000);
+// Auto-scan disabled on page load — too slow (262s+)
+// Scans only run on manual click or scheduled times (12:00/00:00)
+// Real-time citation & Stars updates still happen automatically
+tianyanLog('页面加载完成。引用/Stars 实时更新中，天眼扫描请手动触发或等待定时', 'var(--tx3)');
+
 
 // ── JSON Repair: fix common AI output issues ──────────────────
 function repairJSON(str) {
