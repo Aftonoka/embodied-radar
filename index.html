@@ -6570,64 +6570,22 @@ async function runScan(mode='broad'){
   // Start terminal animation in parallel
   runScanTerminal(names).catch(()=>{});
   const namesStr=names.join('、');
-  const CRITERIA=`
-【硬性前提——必须满足】
-有可运行的开源代码（GitHub repo 已公开，不能只有 arXiv）。
+  const CRITERIA=`【必须有GitHub开源代码】
+入选条件(任一)：顶会(RSS/ICRA/CoRL/NeurIPS/ICLR/CVPR)或Stars≥500或白名单实验室(EPIC/ISR/BAIR/Hao Su/TSAIL等)Stars≥200
+排除：纯综述/无代码/已收录`;
 
-【入选通道——满足任意一条即可入库】
-通道A · 标准通道：顶会录用（RSS/ICRA/CoRL/NeurIPS/ICLR/CVPR/IROS/ECCV/RA-L）或 Stars≥500 或 被现有条目引用
-通道B · 实验室白名单（Stars≥200）：王鹤EPIC Lab、陈建宇组、高阳组、许华哲TEA Lab、丁宁组（清华EE，TTRL/P1/SimpleVLA-RL出处）、Abbeel/Malik/Efros BAIR、Chelsea Finn/Shuran Song Stanford、Levine RAIL、Hao Su UCSD/Hillbot、上海AI实验室 OpenDriveLab、朱军/胡隽组TSAIL、杨耀东组
-通道B+ · 国家级产业创新平台（Stars≥100）：北京人形机器人创新中心、上海人形机器人制造业创新中心、深圳人形机器人创新中心、国家地方共建人形机器人创新中心及同级别产业平台
-通道C · 高产密度（Stars≥100）：同一作24个月内≥3篇顶会一作
-通道E · 引用速度（Stars≥200）：发表/入学<2年但引用>100
-
-【严格排除】纯综述/无代码/单一硬件专属/调参trick/已收录（含别名）`;
-
-  const JSON_FORMAT=`只输出JSON数组，直接从[开始，每条必须包含以下所有字段：
-[{
-  "name": "项目名称",
-  "year": "发表年份",
-  "cat": "sim/policy/general/data/world/nav",
-  "tags": ["顶会或Stars", "年份"],
-  "first_author": "一作英文全名（与arXiv完全一致）",
-  "first_author_zh": "一作中文名或null",
-  "arxiv": "arXiv ID如2403.10506，无则null",
-  "all_authors": ["一作","二作","三作（最多5人）"],
-  "p": 1-5,
-  "e": 1-5,
-  "a": 1-5,
-  "note": "一句中文说明（可用**加粗**标记关键词）",
-  "signal_rank": "paradigm/increment/infra/closing",
-  "signal_problem": "解决的核心问题（一句话，15字内）",
-  "signal_text": "对具身行业的意义（2-3句，说清楚为什么重要）",
-  "startup": "yes/no",
-  "startup_why": "创业机会描述（startup=yes时必填）",
-  "profile": {
-    "name": "一作英文名",
-    "name_zh": "一作中文名或null",
-    "birth_year": "~199X（估算）",
-    "current_role": "当前职位 + 机构",
-    "advisor": "导师姓名（英文）",
-    "citations": "引用数如500+",
-    "scholar": "Google Scholar URL",
-    "github_repo": "代表repo如owner/repo",
-    "stars": "GitHub Stars如1.2k",
-    "ss_name": "Semantic Scholar查询名",
-    "education": "教育路径（本科→PhD→当前）",
-    "industry": "产业经历或—",
-    "top_venues": ["顶会成绩如CoRL 2024"],
-    "awards": ["奖项或—"],
-    "rep_papers": ["代表论文（含会议/arXiv）"],
-    "special_tags": ["特色标签如🚀 已创业"]
-  }
+  const JSON_FORMAT=`只输出JSON数组[{
+"name":"项目名","year":"年份","cat":"sim/policy/general/data/world/nav",
+"tags":["顶会","年份"],"first_author":"一作英文名","first_author_zh":"中文名或null",
+"arxiv":"arXiv ID或null","all_authors":["前5作者"],
+"p":1-5,"e":1-5,"a":1-5,
+"note":"一句中文说明","signal_rank":"paradigm/increment/infra/closing",
+"signal_problem":"核心问题15字","signal_text":"行业意义2句",
+"startup":"yes/no","startup_why":"创业机会",
+"profile":{"name":"一作","name_zh":"中文名","birth_year":"~199X","current_role":"职位+机构","advisor":"导师","citations":"引用数","scholar":"Scholar URL","github_repo":"owner/repo","stars":"Stars数","ss_name":"Semantic Scholar名","education":"教育路径","industry":"产业经历","top_venues":["顶会"],"awards":["奖项"],"rep_papers":["论文"],"special_tags":["标签"]}
 }]
-
-评分标准（P/E/A各1-5分）：
-范式开创性(p): 5=开创全新学习范式 | 4=显著改进已有范式 | 3=扎实创新 | 2=工程优化 | 1=复现/整合
-生态穿透力(e): 5=事实标准产业直接采用 | 4=顶实验室基准Stars≥1k | 3=学术复现广泛 | 2=少数组使用 | 1=无社区
-学术声量(a): 5=引用≥500或Best Paper | 4=引用200-500或Oral | 3=引用50-200或Poster | 2=引用<50 | 1=未被引用
-
-输出3-5个条目；所有信息必须真实可验证；profile字段所有子项必须填写，不可省略。`;
+P评分:5开创范式4改进范式3扎实创新2工程优化1复现;E评分:5产业标准4Stars≥1k3广泛复现2少数用1无;A评分:5引用≥500 4引用200-500 3引用50-200 2<50 1未引用
+输出3条,信息必须真实,profile所有子项必填。`;
 
   const prompt = `你是具身智能领域专家。当前雷达图已有：${namesStr}
 
@@ -6636,7 +6594,7 @@ ${CRITERIA}
 优先级：2024-2025年新发布 > 更早期（同等质量下新work排前）。
 ${JSON_FORMAT}`;
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json',...(ANTHROPIC_API_KEY?{'x-api-key':ANTHROPIC_API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'}:{})},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:4000,messages:[{role:'user',content:prompt}]})});
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json',...(ANTHROPIC_API_KEY?{'x-api-key':ANTHROPIC_API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'}:{})},body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:2000,messages:[{role:'user',content:prompt}]})});
     let body;try{body=await res.json();}catch(e){throw new Error(`HTTP ${res.status}`);}
     if(!res.ok) throw new Error(`HTTP ${res.status}: ${body?.error?.message||''}`);
     const block=(body.content||[]).find(c=>c.type==='text');
@@ -7578,74 +7536,21 @@ function refreshAllLiveData() {
 
 
 // ── Talent Scan ──
-var TALENT_CRITERIA = `
-你是一个专门挖掘具身智能/机器人领域华人青年学者的猎头AI。请从你的训练知识中，找出符合以下条件、但尚未在已知名单中出现的人才候选人（重点关注2023-2025年活跃的年轻学者）。
+var TALENT_CRITERIA = `你是具身智能/机器人领域华人青年学者猎头AI。从训练知识中找出符合条件、不在已知名单中的候选人。
 
-【人才库宽松信号——无需开源代码，命中任一即可】
+【条件（命中任一）】
+- 清华特奖/北大年度人物/郭沫若奖学金/商汤奖学金/字节奖学金获得者
+- 博士在读或毕业≤3年，Google Scholar引用≥500
+- 白名单实验室(王鹤EPIC/陈建宇ISR/高阳/许华哲TEA/杨耀东MARL/朱军TSAIL/鲁继文/丁宁/Abbeel BAIR/Hao Su UCSD)的顶会一作
+- 24个月内≥3篇顶会一作
+- GitHub Stars≥300的具身智能项目作者
 
-通道 T1 · 精英荣誉（无Stars门槛）：
-  清华大学特等奖学金（近3年）
-  北京大学年度人物（近3年）
-  郭沫若奖学金（中科大最高荣誉；第44届已确认：李瑞、刘董）
-  商汤奖学金（2024已确认：陈晓雨、刘胜与、丁昱菲、李忆唐、刘域尧、徐国玮、张逸飞）
-  字节奖学金（2023年起，字节跳动奖学金获得者，重点关注具身智能/机器学习/计算机视觉方向）
-  图灵班/姚班学生 + 任意顶会一作
-  国家自然科学基金青年学生基金获得者
+【排除】非华人、已在名单中、1989年前出生
 
-通道 T2 · 引用速度（无Stars门槛）：
-  博士在读或毕业≤3年，Google Scholar 引用量 ≥ 500
-  或 arXiv论文发布≤1年，引用量 ≥ 100
+【输出】只输出JSON数组，3位候选人：
+[{"name":"英文名","name_zh":"中文名","birth_year":"~2001","institution":"机构","advisor":"导师","citations":"引用数","rep_paper":"代表论文","awards":"荣誉","reason":"30字理由","homepage":"URL","github":"repo URL","email":"邮箱","twitter":"URL","social_connections":["合作者名"]}]
 
-通道 T3 · 白名单实验室顶会作者（一作或共一，无Stars门槛）：
-  实验室白名单：王鹤EPIC Lab（北大）、陈建宇ISRLab（清华IIIS）、高阳组（清华IIIS/千寻智能）、许华哲TEA Lab（清华IIIS/星海图）、杨耀东MARL Lab（北大）、张尚航组（北大）、朱军/胡隽TSAIL（清华）、鲁继文组（清华自动化）、丁宁组（清华EE）、Pieter Abbeel/Jitendra Malik/Alyosha Efros BAIR（Berkeley）、Hao Su组（UCSD/Hillbot）
-  顶会要求：RSS / ICRA / CoRL / NeurIPS / ICLR / CVPR / IROS / ECCV / ICCV 任意一篇作为一作或共同一作
-  华人姓氏要求：姓名看起来是华人（中文姓名或英文姓名像华人）
-
-通道 T4 · 高产密度（无Stars门槛）：
-  24个月内同一华人一作 ≥ 3 篇上述顶会论文
-
-通道 T5 · 国家级创新中心（无Stars门槛）：
-  北京人形机器人创新中心、上海人形机器人制造业创新中心、深圳人形机器人创新中心，发表具身智能方向论文的一作/共一
-
-通道 T6 · WAIC 云帆奖 / 具身智能EAI-100（无Stars门槛）：
-  2023年起 WAIC「璀璨明星」或「明日之星」榜单入选者，且有具身智能相关研究
-  OR 2025年起具身智能EAI-100「学术新锐20」入选者（具身智能基金会每年评选，聚焦具身AI学术贡献）
-
-通道 T7 · 新论文速效（Stars≥300）：
-  顶会录用或发表 ≤12个月，GitHub Stars≥300 或引用增速显著
-  尚未达到 T2 门槛（引用<500）但顶会信号明确（RSS/ICRA/CoRL/NeurIPS/ICLR/CVPR/IROS/ECCV/ICCV）
-
-通道 T8 · 跨界高潜（无顶会要求）：
-  非学术路径（无大学实验室背景），但有产业号召力
-  GitHub Stars≥1000，且明确转向具身智能方向
-
-【排除条件】
-- 【极重要】非华人学者一律排除。Jitendra Malik、Pieter Abbeel、Chelsea Finn、Sergey Levine 等外籍导师不得出现在结果中，哪怕他们是白名单实验室的 PI。只收录具有中文姓名或华人姓氏的学者
-- 纯工业届人员无任何学术发表
-- 已在现有人才库中（已收录）
-- 1989年及以前出生（年龄门槛：只收录1990年及更年轻的学者）
-
-【输出格式】只输出JSON数组，直接从[开始，不要任何解释：
-[{
-  "name": "英文名",
-  "name_zh": "中文名（如知道）",
-  "birth_year": "出生年估计（如~2001）",
-  "institution": "所在机构/实验室",
-  "advisor": "导师（如知道）",
-  "citations": "引用数（字符串）",
-  "hit_channel": "命中通道（T1-T5）",
-  "rep_paper": "代表论文（最多2篇，含会议）",
-  "awards": "荣誉（如有）",
-  "reason": "30字内说明为什么值得关注",
-  "homepage": "个人主页URL（如有）",
-  "github": "GitHub 仓库 URL（必须是 owner/repo 格式，如 https://github.com/PKU-EPIC/GraspVLA，不要个人主页）",
-  "email": "邮箱（如有）",
-  "twitter": "Twitter/X URL（如有）",
-  "social_connections": ["与此人有合作/同门/同实验室关系的其他人的英文名（尽量填，用于人脉圈构建）"]
-}]
-
-请返回8位最符合条件的候选人（宁少勿多，确保JSON完整），优先选最近1-2年有新成果的年轻学者，不要重复已知名单中的人物。
-【极重要】只输出JSON数组本身。第一个字符是[，最后一个字符是]。绝对不要包裹代码块，不要任何前缀文字。
+只输出JSON。第一个字符[，最后一个字符]。不要代码块。
 `;
 
 var TALENT_KNOWN_NAMES = [
@@ -7738,7 +7643,7 @@ async function runTalentScan(){
 已知人才库名单（请勿重复）：${known}`;
 
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json',...(ANTHROPIC_API_KEY?{'x-api-key':ANTHROPIC_API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'}:{})},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:4000,messages:[{role:'user',content:prompt}]})});
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json',...(ANTHROPIC_API_KEY?{'x-api-key':ANTHROPIC_API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'}:{})},body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:2000,messages:[{role:'user',content:prompt}]})});
     let body;try{body=await res.json();}catch(e){throw new Error('响应解析失败');}
     if(!res.ok)throw new Error(`HTTP ${res.status}: ${body?.error?.message||''}`);
     // Collect all text blocks
