@@ -5751,10 +5751,13 @@ if (typeof window.storage === 'undefined') {
   };
 }
 
-// ── API Key Configuration ──
-// 本地运行时请填入你的 Anthropic API Key（从 console.anthropic.com 获取）
-// 部署时可通过环境变量注入，不要将 Key 上传到公开仓库
-var ANTHROPIC_API_KEY = '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';
+// ── Proxy Configuration (Anthropic via ai-nexus) ──
+// dev:
+var PROXY_BASE_URL = 'https://nexus-dev.vitalbridge.com';
+// prod:
+// var PROXY_BASE_URL = 'https://nexus.vitalbridge.com';
+var ANTHROPIC_PROXY_URL = PROXY_BASE_URL + '/api/v1/proxy/anthropic';
+var AUTH_TOKEN = 'your-shared-password-here'; // 填入 ai-nexus 的 X-Auth-Token
 
 // Color constants (mirror CSS vars for JS use)
 var C={ac:'#7c6af7',gr:'#3dd68c',am:'#f5a623',co:'#f0714a',bl:'#4a9cf7',pk:'#e065b0'};
@@ -6603,8 +6606,8 @@ async function runScanTerminal(names){
 
 
 async function runScan(mode='broad'){
-  if(!ANTHROPIC_API_KEY){
-    setStat('var(--co)','NO KEY','请在 HTML 文件顶部填入 ANTHROPIC_API_KEY（sk-ant-...）后重新打开');
+  if(!AUTH_TOKEN){
+    setStat('var(--co)','NO AUTH','请在 HTML 文件顶部填入 AUTH_TOKEN（ai-nexus 的 X-Auth-Token）后重试');
     document.getElementById('stat').style.display='flex';
     return;
   }
@@ -6640,7 +6643,7 @@ ${CRITERIA}
 优先级：2024-2025年新发布 > 更早期（同等质量下新work排前）。
 ${JSON_FORMAT}`;
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json',...(ANTHROPIC_API_KEY?{'x-api-key':ANTHROPIC_API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'}:{})},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:3000,messages:[{role:'user',content:prompt}]})});
+    const res=await fetch(ANTHROPIC_PROXY_URL,{method:'POST',headers:{'Content-Type':'application/json','X-Auth-Token':AUTH_TOKEN},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:3000,messages:[{role:'user',content:prompt}]})});
     let body;try{body=await res.json();}catch(e){throw new Error(`HTTP ${res.status}`);}
     if(!res.ok) throw new Error(`HTTP ${res.status}: ${body?.error?.message||''}`);
     const block=(body.content||[]).find(c=>c.type==='text');
@@ -7689,8 +7692,8 @@ async function runTalentScanTerminal(knownCount){
 
 
 async function runTalentScan(){
-  if(!ANTHROPIC_API_KEY){
-    setStat('var(--co)','NO KEY','请在 HTML 文件顶部填入 ANTHROPIC_API_KEY（sk-ant-...）后重新打开');
+  if(!AUTH_TOKEN){
+    setStat('var(--co)','NO AUTH','请在 HTML 文件顶部填入 AUTH_TOKEN（ai-nexus 的 X-Auth-Token）后重试');
     document.getElementById('stat').style.display='flex';
     return;
   }
@@ -7711,7 +7714,7 @@ async function runTalentScan(){
 已知人才库名单（请勿重复）：${known}`;
 
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json',...(ANTHROPIC_API_KEY?{'x-api-key':ANTHROPIC_API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'}:{})},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:8000,messages:[{role:'user',content:prompt}]})});
+    const res=await fetch(ANTHROPIC_PROXY_URL,{method:'POST',headers:{'Content-Type':'application/json','X-Auth-Token':AUTH_TOKEN},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:8000,messages:[{role:'user',content:prompt}]})});
     let body;try{body=await res.json();}catch(e){throw new Error('响应解析失败');}
     if(!res.ok)throw new Error(`HTTP ${res.status}: ${body?.error?.message||''}`);
     // Collect all text blocks
@@ -8044,7 +8047,7 @@ function clearSearch() {
 
 async function aiSearch() {
   const query = document.getElementById('search-input').value.trim();
-  if(!query || !ANTHROPIC_API_KEY) return;
+  if(!query || !AUTH_TOKEN) return;
   
   const btn = document.getElementById('ai-search-btn');
   const status = document.getElementById('ai-search-status');
@@ -8095,13 +8098,11 @@ async function aiSearch() {
       maxTok = 3000;
     }
     
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
+    const res = await fetch(ANTHROPIC_PROXY_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': ANTHROPIC_API_KEY,
-        'anthropic-version': '2023-06-01',
-        'anthropic-dangerous-direct-browser-access': 'true'
+        'X-Auth-Token': AUTH_TOKEN
       },
       body: JSON.stringify({
         model: 'claude-sonnet-4-20250514',
