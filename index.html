@@ -9041,7 +9041,101 @@ function saveToFile(){
         // Fallback: try _originalSource or outerHTML
         prefix = _originalSource || document.documentElement.outerHTML;
         // Strip from __saved_state__ onward if present
-        var splitPt = prefix.indexOf('
+        var splitPt = prefix.indexOf('<script id="__saved_state__">');
+        if(splitPt > 0) prefix = prefix.slice(0, splitPt);
+        var splitPt2 = prefix.indexOf('<script type="text/html" id="__source_prefix__">');
+        if(splitPt2 > 0) prefix = prefix.slice(0, splitPt2);
+      }
+      // Get suffix (everything from </head> onward in current DOM)
+      var suffixFull = document.documentElement.outerHTML;
+      var headEndPos = suffixFull.indexOf('</head>');
+      var suffix = headEndPos >= 0 ? suffixFull.slice(headEndPos) : '</head><body></body></html>';
+      var src = prefix + ssBlock + '\n' + suffix;
+      if(src.length < 5000) throw new Error('无法获取页面源码');
+
+      // src is already assembled: prefix + ssBlock + suffix (done above)
+
+      // Download
+      var d = new Date();
+      var pad = function(n){ return ('0'+n).slice(-2); };
+      var stamp = d.getFullYear() + pad(d.getMonth()+1) + pad(d.getDate()) + '_' + pad(d.getHours()) + pad(d.getMinutes());
+      var blob = new Blob([src], {type:'text/html'});
+      
+      // Try multiple download methods (Artifact sandbox blocks some)
+      var downloaded = false;
+      
+      // Method 1: Standard createObjectURL + click
+      try {
+        var url = URL.createObjectURL(blob);
+        if (url && !url.startsWith('blob:null')) {
+          var a = document.createElement('a');
+          a.href = url;
+          a.download = 'embodied_radar_' + stamp + '.html';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
+          downloaded = true;
+        }
+      } catch(e) { console.warn('[save] createObjectURL failed:', e.message); }
+      
+      // Method 2: Data URI fallback
+      if (!downloaded) {
+        try {
+          var reader = new FileReader();
+          reader.onload = function() {
+            var a = document.createElement('a');
+            a.href = reader.result;
+            a.download = 'embodied_radar_' + stamp + '.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            downloaded = true;
+          };
+          reader.readAsDataURL(blob);
+        } catch(e) { console.warn('[save] dataURI failed:', e.message); }
+      }
+      
+      // Method 3: If in Artifact, export scanned data as JSON to clipboard
+      if (!downloaded) {
+        var exportData = {
+          _export_time: new Date().toISOString(),
+          frameworks: DATA.filter(function(d){ return d.isNew; }),
+          talent: EXTRA_PEOPLE.filter(function(p){ return p.id.startsWith('scan_'); }),
+          profiles: extraProfiles
+        };
+        var exportJson = JSON.stringify(exportData, null, 2);
+        
+        try {
+          navigator.clipboard.writeText(exportJson).then(function(){
+            if(txt){ txt.textContent='已复制JSON'; txt.style.color='#f5a623'; }
+            alert('Artifact 沙箱内无法下载文件。\n\n扫描数据已复制到剪贴板（' + exportData.frameworks.length + '个框架 + ' + exportData.talent.length + '人），可粘贴保存。\n\n部署到网站后保存按钮可正常使用。');
+          });
+        } catch(e) {
+          // Last resort: show in a prompt
+          prompt('请复制以下数据保存（Ctrl+A 全选 → Ctrl+C 复制）:', exportJson.slice(0, 50000));
+        }
+      }
+
+      if(downloaded) {
+        if(txt){ txt.textContent='\u5df2\u4fdd\u5b58'; txt.style.color='#3dd68c'; }
+      }
+      setTimeout(function(){
+        if(txt){ txt.textContent='\u4fdd\u5b58'; txt.style.color='var(--tx3)'; }
+        if(btn) btn.disabled=false;
+      }, 2000);
+
+    }catch(err){
+      console.error('[saveToFile]', err);
+      if(txt){ txt.textContent='ERROR'; txt.style.color='#f0714a'; }
+      if(btn) btn.disabled=false;
+      setTimeout(function(){ if(txt){ txt.textContent='\u4fdd\u5b58'; txt.style.color='var(--tx3)'; } }, 3000);
+    }
+  }, 30);
+}
+
+
+</script>
 <div id="tianyan-panel" style="display:none;position:fixed;top:0;right:0;bottom:0;width:min(380px,90vw);z-index:9998;background:var(--bg);border-left:0.5px solid var(--bd);box-shadow:-8px 0 32px rgba(0,0,0,.4);display:none;flex-direction:column">
   <div style="padding:16px 20px 12px;border-bottom:0.5px solid var(--bd);display:flex;justify-content:space-between;align-items:center;flex-shrink:0">
     <div style="display:flex;align-items:center;gap:8px">
