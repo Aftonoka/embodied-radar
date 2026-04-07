@@ -1,0 +1,3998 @@
+{
+  "1904.01201": {
+    "status": "correct",
+    "api_title": "Habitat: A Platform for Embodied AI Research",
+    "sources": [
+      "DATA:habitat",
+      "PROFILES:unknown",
+      "SAVED_STATE:habitat"
+    ]
+  },
+  "2009.12293": {
+    "status": "authors_wrong",
+    "file_title": "RoboSuite (robosuite v1.5 / robosuite-task-zoo)",
+    "api_title": "robosuite: A Modular Simulation Framework and Benchmark for Robot Learning",
+    "title_similarity": 0.35,
+    "correct_authors": [
+      "Yuke Zhu",
+      "Josiah Wong",
+      "Ajay Mandlekar",
+      "Roberto Martín-Martín",
+      "Abhishek Joshi",
+      "Kevin Lin",
+      "Abhiram Maddukuri",
+      "Soroush Nasiriany",
+      "Yifeng Zhu"
+    ],
+    "file_authors": [
+      "Josiah Wong",
+      "Abhishek Sharma",
+      "Soroush Nasiriany",
+      "Chen Wang",
+      "Yuke Zhu",
+      "Linxi Fan",
+      "Fei-Fei Li",
+      "Silvio Savarese",
+      "Animesh Garg",
+      "Roberto MartÃ­n-MartÃ­n"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 3,
+      "api_count": 9,
+      "file_count": 10,
+      "missing_from_file": [
+        "Abhiram Maddukuri",
+        "Abhishek Joshi",
+        "Ajay Mandlekar",
+        "Kevin Lin",
+        "Roberto Martín-Martín",
+        "Yifeng Zhu"
+      ],
+      "fabricated_in_file": [
+        "Abhishek Sharma",
+        "Animesh Garg",
+        "Chen Wang",
+        "Fei-Fei Li",
+        "Linxi Fan",
+        "Roberto MartÃ­n-MartÃ­n",
+        "Silvio Savarese"
+      ]
+    },
+    "sources": [
+      "SAVED_STATE:n_robosuiterobos_77416"
+    ]
+  },
+  "2204.01691": {
+    "status": "id_wrong_related",
+    "file_title": "SayCan",
+    "api_title": "Do As I Can, Not As I Say: Grounding Language in Robotic Affordances",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Michael Ahn",
+      "Anthony Brohan",
+      "Noah Brown",
+      "Yevgen Chebotar",
+      "Omar Cortes",
+      "Byron David",
+      "Chelsea Finn",
+      "Chuyuan Fu",
+      "Keerthana Gopalakrishnan",
+      "Karol Hausman",
+      "Alex Herzog",
+      "Daniel Ho",
+      "Jasmine Hsu",
+      "Julian Ibarz",
+      "Brian Ichter",
+      "Alex Irpan",
+      "Eric Jang",
+      "Rosario Jauregui Ruano",
+      "Kyle Jeffrey",
+      "Sally Jesmonth",
+      "Nikhil J Joshi",
+      "Ryan Julian",
+      "Dmitry Kalashnikov",
+      "Yuheng Kuang",
+      "Kuang-Huei Lee",
+      "Sergey Levine",
+      "Yao Lu",
+      "Linda Luu",
+      "Carolina Parada",
+      "Peter Pastor",
+      "Jornell Quiambao",
+      "Kanishka Rao",
+      "Jarek Rettinghouse",
+      "Diego Reyes",
+      "Pierre Sermanet",
+      "Nicolas Sievers",
+      "Clayton Tan",
+      "Alexander Toshev",
+      "Vincent Vanhoucke",
+      "Fei Xia",
+      "Ted Xiao",
+      "Peng Xu",
+      "Sichun Xu",
+      "Mengyuan Yan",
+      "Andy Zeng"
+    ],
+    "sources": [
+      "DATA:saycan",
+      "PROFILES:unknown",
+      "SAVED_STATE:saycan"
+    ]
+  },
+  "2212.06817": {
+    "status": "authors_wrong",
+    "file_title": "RT-1/RT-2",
+    "api_title": "RT-1: Robotics Transformer for Real-World Control at Scale",
+    "title_similarity": 0.16,
+    "correct_authors": [
+      "Anthony Brohan",
+      "Noah Brown",
+      "Justice Carbajal",
+      "Yevgen Chebotar",
+      "Joseph Dabis",
+      "Chelsea Finn",
+      "Keerthana Gopalakrishnan",
+      "Karol Hausman",
+      "Alex Herzog",
+      "Jasmine Hsu",
+      "Julian Ibarz",
+      "Brian Ichter",
+      "Alex Irpan",
+      "Tomas Jackson",
+      "Sally Jesmonth",
+      "Nikhil J Joshi",
+      "Ryan Julian",
+      "Dmitry Kalashnikov",
+      "Yuheng Kuang",
+      "Isabel Leal",
+      "Kuang-Huei Lee",
+      "Sergey Levine",
+      "Yao Lu",
+      "Utsav Malla",
+      "Deeksha Manjunath",
+      "Igor Mordatch",
+      "Ofir Nachum",
+      "Carolina Parada",
+      "Jodilyn Peralta",
+      "Emily Perez",
+      "Karl Pertsch",
+      "Jornell Quiambao",
+      "Kanishka Rao",
+      "Michael Ryoo",
+      "Grecia Salazar",
+      "Pannag Sanketi",
+      "Kevin Sayed",
+      "Jaspiar Singh",
+      "Sumedh Sontakke",
+      "Austin Stone",
+      "Clayton Tan",
+      "Huong Tran",
+      "Vincent Vanhoucke",
+      "Steve Vega",
+      "Quan Vuong",
+      "Fei Xia",
+      "Ted Xiao",
+      "Peng Xu",
+      "Sichun Xu",
+      "Tianhe Yu",
+      "Brianna Zitkovich"
+    ],
+    "file_authors": [
+      "Anthony Brohan",
+      "Noah Brown",
+      "Justice Carbajal",
+      "Yevgen Chebotar",
+      "Joseph Dabis",
+      "Chelsea Finn",
+      "Keerthana Gopalakrishnan",
+      "Karol Hausman",
+      "Alex Herzog",
+      "Jasmine Hsu",
+      "…（Google DeepMind 团队 50+人）"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 10,
+      "api_count": 51,
+      "file_count": 11,
+      "missing_from_file": [
+        "Alex Irpan",
+        "Austin Stone",
+        "Brian Ichter",
+        "Brianna Zitkovich",
+        "Carolina Parada",
+        "Clayton Tan",
+        "Deeksha Manjunath",
+        "Dmitry Kalashnikov",
+        "Emily Perez",
+        "Fei Xia",
+        "Grecia Salazar",
+        "Huong Tran",
+        "Igor Mordatch",
+        "Isabel Leal",
+        "Jaspiar Singh",
+        "Jodilyn Peralta",
+        "Jornell Quiambao",
+        "Julian Ibarz",
+        "Kanishka Rao",
+        "Karl Pertsch",
+        "Kevin Sayed",
+        "Kuang-Huei Lee",
+        "Michael Ryoo",
+        "Nikhil J Joshi",
+        "Ofir Nachum",
+        "Pannag Sanketi",
+        "Peng Xu",
+        "Quan Vuong",
+        "Ryan Julian",
+        "Sally Jesmonth",
+        "Sergey Levine",
+        "Sichun Xu",
+        "Steve Vega",
+        "Sumedh Sontakke",
+        "Ted Xiao",
+        "Tianhe Yu",
+        "Tomas Jackson",
+        "Utsav Malla",
+        "Vincent Vanhoucke",
+        "Yao Lu",
+        "Yuheng Kuang"
+      ],
+      "fabricated_in_file": [
+        "…（Google DeepMind 团队 50+人）"
+      ]
+    },
+    "sources": [
+      "DATA:rt2",
+      "PROFILES:unknown",
+      "SAVED_STATE:rt2"
+    ]
+  },
+  "2212.08333": {
+    "status": "correct",
+    "api_title": "AnyGrasp: Robust and Efficient Grasp Perception in Spatial and Temporal Domains",
+    "sources": [
+      "SAVED_STATE:n_anygrasp_77416"
+    ]
+  },
+  "2301.04104": {
+    "status": "id_wrong_unrelated",
+    "file_title": "DreamerV3",
+    "api_title": "Mastering Diverse Domains through World Models",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Danijar Hafner",
+      "Jurgis Pasukonis",
+      "Jimmy Ba",
+      "Timothy Lillicrap"
+    ],
+    "sources": [
+      "DATA:dreamer",
+      "PROFILES:unknown",
+      "SAVED_STATE:dreamer"
+    ]
+  },
+  "2301.04195": {
+    "status": "id_wrong_related",
+    "file_title": "Isaac Lab",
+    "api_title": "Orbit: A Unified Simulation Framework for Interactive Robot Learning Environments",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Mayank Mittal",
+      "Calvin Yu",
+      "Qinxi Yu",
+      "Jingzhou Liu",
+      "Nikita Rudin",
+      "David Hoeller",
+      "Jia Lin Yuan",
+      "Ritvik Singh",
+      "Yunrong Guo",
+      "Hammad Mazhar",
+      "Ajay Mandlekar",
+      "Buck Babich",
+      "Gavriel State",
+      "Marco Hutter",
+      "Animesh Garg"
+    ],
+    "sources": [
+      "DATA:isaaclab",
+      "SAVED_STATE:isaaclab"
+    ]
+  },
+  "2303.04137": {
+    "status": "correct",
+    "api_title": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+    "sources": [
+      "DATA:diffpolicy",
+      "SAVED_STATE:diffpolicy"
+    ]
+  },
+  "2304.00464": {
+    "status": "authors_wrong",
+    "file_title": "UniDexGrasp++",
+    "api_title": "UniDexGrasp++: Improving Dexterous Grasping Policy Learning via Geometry-aware Curriculum and Iterative Generalist-Specialist Learning",
+    "title_similarity": 0.16,
+    "correct_authors": [
+      "Weikang Wan",
+      "Haoran Geng",
+      "Yun Liu",
+      "Zikang Shan",
+      "Yaodong Yang",
+      "Li Yi",
+      "He Wang"
+    ],
+    "file_authors": [
+      "Yinzhen Xu",
+      "Weikang Wan",
+      "Jialiang Zhang",
+      "Haoran Liu",
+      "Zikang Shan",
+      "Hao Shen",
+      "Ruicheng Wang",
+      "Haoran Geng",
+      "Yijia Weng",
+      "Jiayi Chen",
+      "Tengyu Liu",
+      "Li Yi",
+      "He Wang"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 5,
+      "api_count": 7,
+      "file_count": 13,
+      "missing_from_file": [
+        "Yaodong Yang",
+        "Yun Liu"
+      ],
+      "fabricated_in_file": [
+        "Hao Shen",
+        "Haoran Liu",
+        "Jialiang Zhang",
+        "Jiayi Chen",
+        "Ruicheng Wang",
+        "Tengyu Liu",
+        "Yijia Weng",
+        "Yinzhen Xu"
+      ]
+    },
+    "sources": [
+      "DATA:n_unidexgrasp_73877",
+      "SAVED_STATE:n_unidexgrasp_73877"
+    ]
+  },
+  "2304.13705": {
+    "status": "id_wrong_related",
+    "file_title": "ACT",
+    "api_title": "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Tony Z. Zhao",
+      "Vikash Kumar",
+      "Sergey Levine",
+      "Chelsea Finn"
+    ],
+    "sources": [
+      "DATA:act",
+      "SAVED_STATE:act"
+    ]
+  },
+  "2307.05973": {
+    "status": "correct",
+    "api_title": "VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models",
+    "sources": [
+      "DATA:n_voxposer_96641",
+      "SAVED_STATE:n_voxposer_96641"
+    ]
+  },
+  "2307.15818": {
+    "status": "id_wrong_related",
+    "file_title": "GR-1",
+    "api_title": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Anthony Brohan",
+      "Noah Brown",
+      "Justice Carbajal",
+      "Yevgen Chebotar",
+      "Xi Chen",
+      "Krzysztof Choromanski",
+      "Tianli Ding",
+      "Danny Driess",
+      "Avinava Dubey",
+      "Chelsea Finn",
+      "Pete Florence",
+      "Chuyuan Fu",
+      "Montse Gonzalez Arenas",
+      "Keerthana Gopalakrishnan",
+      "Kehang Han",
+      "Karol Hausman",
+      "Alexander Herzog",
+      "Jasmine Hsu",
+      "Brian Ichter",
+      "Alex Irpan",
+      "Nikhil Joshi",
+      "Ryan Julian",
+      "Dmitry Kalashnikov",
+      "Yuheng Kuang",
+      "Isabel Leal",
+      "Lisa Lee",
+      "Tsang-Wei Edward Lee",
+      "Sergey Levine",
+      "Yao Lu",
+      "Henryk Michalewski",
+      "Igor Mordatch",
+      "Karl Pertsch",
+      "Kanishka Rao",
+      "Krista Reymann",
+      "Michael Ryoo",
+      "Grecia Salazar",
+      "Pannag Sanketi",
+      "Pierre Sermanet",
+      "Jaspiar Singh",
+      "Anikait Singh",
+      "Radu Soricut",
+      "Huong Tran",
+      "Vincent Vanhoucke",
+      "Quan Vuong",
+      "Ayzaan Wahid",
+      "Stefan Welker",
+      "Paul Wohlhart",
+      "Jialin Wu",
+      "Fei Xia",
+      "Ted Xiao",
+      "Peng Xu",
+      "Sichun Xu",
+      "Tianhe Yu",
+      "Brianna Zitkovich"
+    ],
+    "sources": [
+      "DATA:n_gr1_10438",
+      "PROFILES:unknown",
+      "SAVED_STATE:n_gr1_10438"
+    ]
+  },
+  "2309.01918": {
+    "status": "authors_wrong",
+    "file_title": "RoboAgent",
+    "api_title": "RoboAgent: Generalization and Efficiency in Robot Manipulation via Semantic Augmentations and Action Chunking",
+    "title_similarity": 0.15,
+    "correct_authors": [
+      "Homanga Bharadhwaj",
+      "Jay Vakil",
+      "Mohit Sharma",
+      "Abhinav Gupta",
+      "Shubham Tulsiani",
+      "Vikash Kumar"
+    ],
+    "file_authors": [
+      "Homanga Bharadhwaj",
+      "Jay Vakil",
+      "Tushar Nagarajan",
+      "Abhinav Gupta",
+      "Shubham Tulsiani",
+      "Vikash Kumar"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 5,
+      "api_count": 6,
+      "file_count": 6,
+      "missing_from_file": [
+        "Mohit Sharma"
+      ],
+      "fabricated_in_file": [
+        "Tushar Nagarajan"
+      ]
+    },
+    "sources": [
+      "SAVED_STATE:n_roboagent_77416"
+    ]
+  },
+  "2310.06114": {
+    "status": "authors_wrong",
+    "file_title": "UniSim (UniSim-C / Learning Interactive Real-World Simulators)",
+    "api_title": "Learning Interactive Real-World Simulators",
+    "title_similarity": 0.84,
+    "correct_authors": [
+      "Sherry Yang",
+      "Yilun Du",
+      "Kamyar Ghasemipour",
+      "Jonathan Tompson",
+      "Leslie Kaelbling",
+      "Dale Schuurmans",
+      "Pieter Abbeel"
+    ],
+    "file_authors": [
+      "Yunzhu Li",
+      "Shuang Li",
+      "Vincent Sitzmann",
+      "Pulkit Agrawal",
+      "Antonio Torralba"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 0,
+      "api_count": 7,
+      "file_count": 5,
+      "missing_from_file": [
+        "Dale Schuurmans",
+        "Jonathan Tompson",
+        "Kamyar Ghasemipour",
+        "Leslie Kaelbling",
+        "Pieter Abbeel",
+        "Sherry Yang",
+        "Yilun Du"
+      ],
+      "fabricated_in_file": [
+        "Antonio Torralba",
+        "Pulkit Agrawal",
+        "Shuang Li",
+        "Vincent Sitzmann",
+        "Yunzhu Li"
+      ]
+    },
+    "sources": [
+      "SAVED_STATE:n_unisimunisimcl_40872"
+    ]
+  },
+  "2310.06828": {
+    "status": "authors_wrong",
+    "file_title": "RoboHive",
+    "api_title": "RoboHive: A Unified Framework for Robot Learning",
+    "title_similarity": 0.29,
+    "correct_authors": [
+      "Vikash Kumar",
+      "Rutav Shah",
+      "Gaoyue Zhou",
+      "Vincent Moens",
+      "Vittorio Caggiano",
+      "Jay Vakil",
+      "Abhishek Gupta",
+      "Aravind Rajeswaran"
+    ],
+    "file_authors": [
+      "Vikash Kumar",
+      "Rutav Shah",
+      "Gaoyue Zhou",
+      "Vincent Moens",
+      "Vittorio Caggiano",
+      "Abhishek Gupta",
+      "Aravind Rajeswaran"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 7,
+      "api_count": 8,
+      "file_count": 7,
+      "missing_from_file": [
+        "Jay Vakil"
+      ],
+      "fabricated_in_file": []
+    },
+    "sources": [
+      "DATA:n_robohive_46639",
+      "SAVED_STATE:n_robohive_46639"
+    ]
+  },
+  "2310.08164": {
+    "status": "id_wrong_unrelated",
+    "file_title": "GROOT",
+    "api_title": "Interpreting Learned Feedback Patterns in Large Language Models",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Luke Marks",
+      "Amir Abdullah",
+      "Clement Neo",
+      "Rauno Arike",
+      "David Krueger",
+      "Philip Torr",
+      "Fazl Barez"
+    ],
+    "sources": [
+      "DATA:n_groot_81782",
+      "SAVED_STATE:n_groot_81782"
+    ]
+  },
+  "2310.08864": {
+    "status": "authors_wrong",
+    "file_title": "Open X-Embodiment",
+    "api_title": "Open X-Embodiment: Robotic Learning Datasets and RT-X Models",
+    "title_similarity": 0.44,
+    "correct_authors": [
+      "Open X-Embodiment Collaboration",
+      "Abby O'Neill",
+      "Abdul Rehman",
+      "Abhinav Gupta",
+      "Abhiram Maddukuri",
+      "Abhishek Gupta",
+      "Abhishek Padalkar",
+      "Abraham Lee",
+      "Acorn Pooley",
+      "Agrim Gupta",
+      "Ajay Mandlekar",
+      "Ajinkya Jain",
+      "Albert Tung",
+      "Alex Bewley",
+      "Alex Herzog",
+      "Alex Irpan",
+      "Alexander Khazatsky",
+      "Anant Rai",
+      "Anchit Gupta",
+      "Andrew Wang",
+      "Andrey Kolobov",
+      "Anikait Singh",
+      "Animesh Garg",
+      "Aniruddha Kembhavi",
+      "Annie Xie",
+      "Anthony Brohan",
+      "Antonin Raffin",
+      "Archit Sharma",
+      "Arefeh Yavary",
+      "Arhan Jain",
+      "Ashwin Balakrishna",
+      "Ayzaan Wahid",
+      "Ben Burgess-Limerick",
+      "Beomjoon Kim",
+      "Bernhard Schölkopf",
+      "Blake Wulfe",
+      "Brian Ichter",
+      "Cewu Lu",
+      "Charles Xu",
+      "Charlotte Le",
+      "Chelsea Finn",
+      "Chen Wang",
+      "Chenfeng Xu",
+      "Cheng Chi",
+      "Chenguang Huang",
+      "Christine Chan",
+      "Christopher Agia",
+      "Chuer Pan",
+      "Chuyuan Fu",
+      "Coline Devin",
+      "Danfei Xu",
+      "Daniel Morton",
+      "Danny Driess",
+      "Daphne Chen",
+      "Deepak Pathak",
+      "Dhruv Shah",
+      "Dieter Büchler",
+      "Dinesh Jayaraman",
+      "Dmitry Kalashnikov",
+      "Dorsa Sadigh",
+      "Edward Johns",
+      "Ethan Foster",
+      "Fangchen Liu",
+      "Federico Ceola",
+      "Fei Xia",
+      "Feiyu Zhao",
+      "Felipe Vieira Frujeri",
+      "Freek Stulp",
+      "Gaoyue Zhou",
+      "Gaurav S. Sukhatme",
+      "Gautam Salhotra",
+      "Ge Yan",
+      "Gilbert Feng",
+      "Giulio Schiavi",
+      "Glen Berseth",
+      "Gregory Kahn",
+      "Guangwen Yang",
+      "Guanzhi Wang",
+      "Hao Su",
+      "Hao-Shu Fang",
+      "Haochen Shi",
+      "Henghui Bao",
+      "Heni Ben Amor",
+      "Henrik I Christensen",
+      "Hiroki Furuta",
+      "Homanga Bharadhwaj",
+      "Homer Walke",
+      "Hongjie Fang",
+      "Huy Ha",
+      "Igor Mordatch",
+      "Ilija Radosavovic",
+      "Isabel Leal",
+      "Jacky Liang",
+      "Jad Abou-Chakra",
+      "Jaehyung Kim",
+      "Jaimyn Drake",
+      "Jan Peters",
+      "Jan Schneider",
+      "Jasmine Hsu",
+      "Jay Vakil",
+      "Jeannette Bohg",
+      "Jeffrey Bingham",
+      "Jeffrey Wu",
+      "Jensen Gao",
+      "Jiaheng Hu",
+      "Jiajun Wu",
+      "Jialin Wu",
+      "Jiankai Sun",
+      "Jianlan Luo",
+      "Jiayuan Gu",
+      "Jie Tan",
+      "Jihoon Oh",
+      "Jimmy Wu",
+      "Jingpei Lu",
+      "Jingyun Yang",
+      "Jitendra Malik",
+      "João Silvério",
+      "Joey Hejna",
+      "Jonathan Booher",
+      "Jonathan Tompson",
+      "Jonathan Yang",
+      "Jordi Salvador",
+      "Joseph J. Lim",
+      "Junhyek Han",
+      "Kaiyuan Wang",
+      "Kanishka Rao",
+      "Karl Pertsch",
+      "Karol Hausman",
+      "Keegan Go",
+      "Keerthana Gopalakrishnan",
+      "Ken Goldberg",
+      "Kendra Byrne",
+      "Kenneth Oslund",
+      "Kento Kawaharazuka",
+      "Kevin Black",
+      "Kevin Lin",
+      "Kevin Zhang",
+      "Kiana Ehsani",
+      "Kiran Lekkala",
+      "Kirsty Ellis",
+      "Krishan Rana",
+      "Krishnan Srinivasan",
+      "Kuan Fang",
+      "Kunal Pratap Singh",
+      "Kuo-Hao Zeng",
+      "Kyle Hatch",
+      "Kyle Hsu",
+      "Laurent Itti",
+      "Lawrence Yunliang Chen",
+      "Lerrel Pinto",
+      "Li Fei-Fei",
+      "Liam Tan",
+      "Linxi \"Jim\" Fan",
+      "Lionel Ott",
+      "Lisa Lee",
+      "Luca Weihs",
+      "Magnum Chen",
+      "Marion Lepert",
+      "Marius Memmel",
+      "Masayoshi Tomizuka",
+      "Masha Itkina",
+      "Mateo Guaman Castro",
+      "Max Spero",
+      "Maximilian Du",
+      "Michael Ahn",
+      "Michael C. Yip",
+      "Mingtong Zhang",
+      "Mingyu Ding",
+      "Minho Heo",
+      "Mohan Kumar Srirama",
+      "Mohit Sharma",
+      "Moo Jin Kim",
+      "Muhammad Zubair Irshad",
+      "Naoaki Kanazawa",
+      "Nicklas Hansen",
+      "Nicolas Heess",
+      "Nikhil J Joshi",
+      "Niko Suenderhauf",
+      "Ning Liu",
+      "Norman Di Palo",
+      "Nur Muhammad Mahi Shafiullah",
+      "Oier Mees",
+      "Oliver Kroemer",
+      "Osbert Bastani",
+      "Pannag R Sanketi",
+      "Patrick \"Tree\" Miller",
+      "Patrick Yin",
+      "Paul Wohlhart",
+      "Peng Xu",
+      "Peter David Fagan",
+      "Peter Mitrano",
+      "Pierre Sermanet",
+      "Pieter Abbeel",
+      "Priya Sundaresan",
+      "Qiuyu Chen",
+      "Quan Vuong",
+      "Rafael Rafailov",
+      "Ran Tian",
+      "Ria Doshi",
+      "Roberto Martín-Martín",
+      "Rohan Baijal",
+      "Rosario Scalise",
+      "Rose Hendrix",
+      "Roy Lin",
+      "Runjia Qian",
+      "Ruohan Zhang",
+      "Russell Mendonca",
+      "Rutav Shah",
+      "Ryan Hoque",
+      "Ryan Julian",
+      "Samuel Bustamante",
+      "Sean Kirmani",
+      "Sergey Levine",
+      "Shan Lin",
+      "Sherry Moore",
+      "Shikhar Bahl",
+      "Shivin Dass",
+      "Shubham Sonawani",
+      "Shubham Tulsiani",
+      "Shuran Song",
+      "Sichun Xu",
+      "Siddhant Haldar",
+      "Siddharth Karamcheti",
+      "Simeon Adebola",
+      "Simon Guist",
+      "Soroush Nasiriany",
+      "Stefan Schaal",
+      "Stefan Welker",
+      "Stephen Tian",
+      "Subramanian Ramamoorthy",
+      "Sudeep Dasari",
+      "Suneel Belkhale",
+      "Sungjae Park",
+      "Suraj Nair",
+      "Suvir Mirchandani",
+      "Takayuki Osa",
+      "Tanmay Gupta",
+      "Tatsuya Harada",
+      "Tatsuya Matsushima",
+      "Ted Xiao",
+      "Thomas Kollar",
+      "Tianhe Yu",
+      "Tianli Ding",
+      "Todor Davchev",
+      "Tony Z. Zhao",
+      "Travis Armstrong",
+      "Trevor Darrell",
+      "Trinity Chung",
+      "Vidhi Jain",
+      "Vikash Kumar",
+      "Vincent Vanhoucke",
+      "Vitor Guizilini",
+      "Wei Zhan",
+      "Wenxuan Zhou",
+      "Wolfram Burgard",
+      "Xi Chen",
+      "Xiangyu Chen",
+      "Xiaolong Wang",
+      "Xinghao Zhu",
+      "Xinyang Geng",
+      "Xiyuan Liu",
+      "Xu Liangwei",
+      "Xuanlin Li",
+      "Yansong Pang",
+      "Yao Lu",
+      "Yecheng Jason Ma",
+      "Yejin Kim",
+      "Yevgen Chebotar",
+      "Yifan Zhou",
+      "Yifeng Zhu",
+      "Yilin Wu",
+      "Ying Xu",
+      "Yixuan Wang",
+      "Yonatan Bisk",
+      "Yongqiang Dou",
+      "Yoonyoung Cho",
+      "Youngwoon Lee",
+      "Yuchen Cui",
+      "Yue Cao",
+      "Yueh-Hua Wu",
+      "Yujin Tang",
+      "Yuke Zhu",
+      "Yunchu Zhang",
+      "Yunfan Jiang",
+      "Yunshuang Li",
+      "Yunzhu Li",
+      "Yusuke Iwasawa",
+      "Yutaka Matsuo",
+      "Zehan Ma",
+      "Zhuo Xu",
+      "Zichen Jeff Cui",
+      "Zichen Zhang",
+      "Zipeng Fu",
+      "Zipeng Lin"
+    ],
+    "file_authors": [
+      "Abhishek Padalkar",
+      "Acorn Pooley",
+      "Ajinkya Jain",
+      "Alex Bewley",
+      "Alex Herzog",
+      "Alex Irpan",
+      "Alexander Khazatsky",
+      "Anant Rai",
+      "Anikait Singh",
+      "Anthony Brohan",
+      "…（22机构 100+作者）"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 10,
+      "api_count": 294,
+      "file_count": 11,
+      "missing_from_file": [
+        "Abby O'Neill",
+        "Abdul Rehman",
+        "Abhinav Gupta",
+        "Abhiram Maddukuri",
+        "Abhishek Gupta",
+        "Abraham Lee",
+        "Agrim Gupta",
+        "Ajay Mandlekar",
+        "Albert Tung",
+        "Anchit Gupta",
+        "Andrew Wang",
+        "Andrey Kolobov",
+        "Animesh Garg",
+        "Aniruddha Kembhavi",
+        "Annie Xie",
+        "Antonin Raffin",
+        "Archit Sharma",
+        "Arefeh Yavary",
+        "Arhan Jain",
+        "Ashwin Balakrishna",
+        "Ayzaan Wahid",
+        "Ben Burgess-Limerick",
+        "Beomjoon Kim",
+        "Bernhard Schölkopf",
+        "Blake Wulfe",
+        "Brian Ichter",
+        "Cewu Lu",
+        "Charles Xu",
+        "Charlotte Le",
+        "Chelsea Finn",
+        "Chen Wang",
+        "Chenfeng Xu",
+        "Cheng Chi",
+        "Chenguang Huang",
+        "Christine Chan",
+        "Christopher Agia",
+        "Chuer Pan",
+        "Chuyuan Fu",
+        "Coline Devin",
+        "Danfei Xu",
+        "Daniel Morton",
+        "Danny Driess",
+        "Daphne Chen",
+        "Deepak Pathak",
+        "Dhruv Shah",
+        "Dieter Büchler",
+        "Dinesh Jayaraman",
+        "Dmitry Kalashnikov",
+        "Dorsa Sadigh",
+        "Edward Johns",
+        "Ethan Foster",
+        "Fangchen Liu",
+        "Federico Ceola",
+        "Fei Xia",
+        "Feiyu Zhao",
+        "Felipe Vieira Frujeri",
+        "Freek Stulp",
+        "Gaoyue Zhou",
+        "Gaurav S. Sukhatme",
+        "Gautam Salhotra",
+        "Ge Yan",
+        "Gilbert Feng",
+        "Giulio Schiavi",
+        "Glen Berseth",
+        "Gregory Kahn",
+        "Guangwen Yang",
+        "Guanzhi Wang",
+        "Hao Su",
+        "Hao-Shu Fang",
+        "Haochen Shi",
+        "Henghui Bao",
+        "Heni Ben Amor",
+        "Henrik I Christensen",
+        "Hiroki Furuta",
+        "Homanga Bharadhwaj",
+        "Homer Walke",
+        "Hongjie Fang",
+        "Huy Ha",
+        "Igor Mordatch",
+        "Ilija Radosavovic",
+        "Isabel Leal",
+        "Jacky Liang",
+        "Jad Abou-Chakra",
+        "Jaehyung Kim",
+        "Jaimyn Drake",
+        "Jan Peters",
+        "Jan Schneider",
+        "Jasmine Hsu",
+        "Jay Vakil",
+        "Jeannette Bohg",
+        "Jeffrey Bingham",
+        "Jeffrey Wu",
+        "Jensen Gao",
+        "Jiaheng Hu",
+        "Jiajun Wu",
+        "Jialin Wu",
+        "Jiankai Sun",
+        "Jianlan Luo",
+        "Jiayuan Gu",
+        "Jie Tan",
+        "Jihoon Oh",
+        "Jimmy Wu",
+        "Jingpei Lu",
+        "Jingyun Yang",
+        "Jitendra Malik",
+        "Joey Hejna",
+        "Jonathan Booher",
+        "Jonathan Tompson",
+        "Jonathan Yang",
+        "Jordi Salvador",
+        "Joseph J. Lim",
+        "João Silvério",
+        "Junhyek Han",
+        "Kaiyuan Wang",
+        "Kanishka Rao",
+        "Karl Pertsch",
+        "Karol Hausman",
+        "Keegan Go",
+        "Keerthana Gopalakrishnan",
+        "Ken Goldberg",
+        "Kendra Byrne",
+        "Kenneth Oslund",
+        "Kento Kawaharazuka",
+        "Kevin Black",
+        "Kevin Lin",
+        "Kevin Zhang",
+        "Kiana Ehsani",
+        "Kiran Lekkala",
+        "Kirsty Ellis",
+        "Krishan Rana",
+        "Krishnan Srinivasan",
+        "Kuan Fang",
+        "Kunal Pratap Singh",
+        "Kuo-Hao Zeng",
+        "Kyle Hatch",
+        "Kyle Hsu",
+        "Laurent Itti",
+        "Lawrence Yunliang Chen",
+        "Lerrel Pinto",
+        "Li Fei-Fei",
+        "Liam Tan",
+        "Linxi \"Jim\" Fan",
+        "Lionel Ott",
+        "Lisa Lee",
+        "Luca Weihs",
+        "Magnum Chen",
+        "Marion Lepert",
+        "Marius Memmel",
+        "Masayoshi Tomizuka",
+        "Masha Itkina",
+        "Mateo Guaman Castro",
+        "Max Spero",
+        "Maximilian Du",
+        "Michael Ahn",
+        "Michael C. Yip",
+        "Mingtong Zhang",
+        "Mingyu Ding",
+        "Minho Heo",
+        "Mohan Kumar Srirama",
+        "Mohit Sharma",
+        "Moo Jin Kim",
+        "Muhammad Zubair Irshad",
+        "Naoaki Kanazawa",
+        "Nicklas Hansen",
+        "Nicolas Heess",
+        "Nikhil J Joshi",
+        "Niko Suenderhauf",
+        "Ning Liu",
+        "Norman Di Palo",
+        "Nur Muhammad Mahi Shafiullah",
+        "Oier Mees",
+        "Oliver Kroemer",
+        "Open X-Embodiment Collaboration",
+        "Osbert Bastani",
+        "Pannag R Sanketi",
+        "Patrick \"Tree\" Miller",
+        "Patrick Yin",
+        "Paul Wohlhart",
+        "Peng Xu",
+        "Peter David Fagan",
+        "Peter Mitrano",
+        "Pierre Sermanet",
+        "Pieter Abbeel",
+        "Priya Sundaresan",
+        "Qiuyu Chen",
+        "Quan Vuong",
+        "Rafael Rafailov",
+        "Ran Tian",
+        "Ria Doshi",
+        "Roberto Martín-Martín",
+        "Rohan Baijal",
+        "Rosario Scalise",
+        "Rose Hendrix",
+        "Roy Lin",
+        "Runjia Qian",
+        "Ruohan Zhang",
+        "Russell Mendonca",
+        "Rutav Shah",
+        "Ryan Hoque",
+        "Ryan Julian",
+        "Samuel Bustamante",
+        "Sean Kirmani",
+        "Sergey Levine",
+        "Shan Lin",
+        "Sherry Moore",
+        "Shikhar Bahl",
+        "Shivin Dass",
+        "Shubham Sonawani",
+        "Shubham Tulsiani",
+        "Shuran Song",
+        "Sichun Xu",
+        "Siddhant Haldar",
+        "Siddharth Karamcheti",
+        "Simeon Adebola",
+        "Simon Guist",
+        "Soroush Nasiriany",
+        "Stefan Schaal",
+        "Stefan Welker",
+        "Stephen Tian",
+        "Subramanian Ramamoorthy",
+        "Sudeep Dasari",
+        "Suneel Belkhale",
+        "Sungjae Park",
+        "Suraj Nair",
+        "Suvir Mirchandani",
+        "Takayuki Osa",
+        "Tanmay Gupta",
+        "Tatsuya Harada",
+        "Tatsuya Matsushima",
+        "Ted Xiao",
+        "Thomas Kollar",
+        "Tianhe Yu",
+        "Tianli Ding",
+        "Todor Davchev",
+        "Tony Z. Zhao",
+        "Travis Armstrong",
+        "Trevor Darrell",
+        "Trinity Chung",
+        "Vidhi Jain",
+        "Vikash Kumar",
+        "Vincent Vanhoucke",
+        "Vitor Guizilini",
+        "Wei Zhan",
+        "Wenxuan Zhou",
+        "Wolfram Burgard",
+        "Xi Chen",
+        "Xiangyu Chen",
+        "Xiaolong Wang",
+        "Xinghao Zhu",
+        "Xinyang Geng",
+        "Xiyuan Liu",
+        "Xu Liangwei",
+        "Xuanlin Li",
+        "Yansong Pang",
+        "Yao Lu",
+        "Yecheng Jason Ma",
+        "Yejin Kim",
+        "Yevgen Chebotar",
+        "Yifan Zhou",
+        "Yifeng Zhu",
+        "Yilin Wu",
+        "Ying Xu",
+        "Yixuan Wang",
+        "Yonatan Bisk",
+        "Yongqiang Dou",
+        "Yoonyoung Cho",
+        "Youngwoon Lee",
+        "Yuchen Cui",
+        "Yue Cao",
+        "Yueh-Hua Wu",
+        "Yujin Tang",
+        "Yuke Zhu",
+        "Yunchu Zhang",
+        "Yunfan Jiang",
+        "Yunshuang Li",
+        "Yunzhu Li",
+        "Yusuke Iwasawa",
+        "Yutaka Matsuo",
+        "Zehan Ma",
+        "Zhuo Xu",
+        "Zichen Jeff Cui",
+        "Zichen Zhang",
+        "Zipeng Fu",
+        "Zipeng Lin"
+      ],
+      "fabricated_in_file": [
+        "…（22机构 100+作者）"
+      ]
+    },
+    "sources": [
+      "DATA:openx",
+      "PROFILES:unknown",
+      "PROFILES:unknown",
+      "SAVED_STATE:openx"
+    ]
+  },
+  "2310.16828": {
+    "status": "correct",
+    "api_title": "TD-MPC2: Scalable, Robust World Models for Continuous Control",
+    "sources": [
+      "DATA:tdmpc2",
+      "PROFILES:unknown",
+      "SAVED_STATE:tdmpc2"
+    ]
+  },
+  "2310.17596": {
+    "status": "correct",
+    "api_title": "MimicGen: A Data Generation System for Scalable Robot Learning using Human Demonstrations",
+    "sources": [
+      "DATA:n_mimicgen_48415",
+      "SAVED_STATE:n_mimicgen_48415"
+    ]
+  },
+  "2311.01378": {
+    "status": "id_wrong_related",
+    "file_title": "RoboFlamingo",
+    "api_title": "Vision-Language Foundation Models as Effective Robot Imitators",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Xinghang Li",
+      "Minghuan Liu",
+      "Hanbo Zhang",
+      "Cunjun Yu",
+      "Jie Xu",
+      "Hongtao Wu",
+      "Chilam Cheang",
+      "Ya Jing",
+      "Weinan Zhang",
+      "Huaping Liu",
+      "Hang Li",
+      "Tao Kong"
+    ],
+    "sources": [
+      "SAVED_STATE:n_roboflamingo_77416"
+    ]
+  },
+  "2311.01455": {
+    "status": "correct",
+    "api_title": "RoboGen: Towards Unleashing Infinite Data for Automated Robot Learning via Generative Simulation",
+    "sources": [
+      "DATA:n_robogen_55362",
+      "SAVED_STATE:n_robogen_55362"
+    ]
+  },
+  "2401.02117": {
+    "status": "correct",
+    "api_title": "Mobile ALOHA: Learning Bimanual Mobile Manipulation with Low-Cost Whole-Body Teleoperation",
+    "sources": [
+      "DATA:n_mobilealoha_10438",
+      "SAVED_STATE:n_mobilealoha_10438"
+    ]
+  },
+  "2402.16218": {
+    "status": "id_wrong_unrelated",
+    "file_title": "RoboCodeX",
+    "api_title": "Relativistic Alfvén turbulence at kinetic scales",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Cristian Vega",
+      "Stanislav Boldyrev",
+      "Vadim Roytershteyn"
+    ],
+    "sources": [
+      "SAVED_STATE:n_robocodex_12494"
+    ]
+  },
+  "2403.03181": {
+    "status": "id_wrong_related",
+    "file_title": "VQ-BeT",
+    "api_title": "Behavior Generation with Latent Actions",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Seungjae Lee",
+      "Yibin Wang",
+      "Haritheja Etukuru",
+      "H. Jin Kim",
+      "Nur Muhammad Mahi Shafiullah",
+      "Lerrel Pinto"
+    ],
+    "sources": [
+      "DATA:n_vqbet_29732",
+      "SAVED_STATE:n_vqbet_29732"
+    ]
+  },
+  "2403.03949": {
+    "status": "id_wrong_related",
+    "file_title": "MOKA",
+    "api_title": "Reconciling Reality through Simulation: A Real-to-Sim-to-Real Approach for Robust Manipulation",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Marcel Torne",
+      "Anthony Simeonov",
+      "Zechu Li",
+      "April Chan",
+      "Tao Chen",
+      "Abhishek Gupta",
+      "Pulkit Agrawal"
+    ],
+    "sources": [
+      "DATA:n_moka_96641",
+      "SAVED_STATE:n_moka_96641"
+    ]
+  },
+  "2403.03954": {
+    "status": "authors_wrong",
+    "file_title": "DP3 (3D Diffusion Policy)",
+    "api_title": "3D Diffusion Policy: Generalizable Visuomotor Policy Learning via Simple 3D Representations",
+    "title_similarity": 0.34,
+    "correct_authors": [
+      "Yanjie Ze",
+      "Gu Zhang",
+      "Kangning Zhang",
+      "Chenyuan Hu",
+      "Muhan Wang",
+      "Huazhe Xu"
+    ],
+    "file_authors": [
+      "Yanjie Ze*",
+      "Gu Zhang*",
+      "Kangning Zhang",
+      "Chenyuan Hu",
+      "Muhan Wang",
+      "Huazhe Xu"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 4,
+      "api_count": 6,
+      "file_count": 6,
+      "missing_from_file": [
+        "Gu Zhang",
+        "Yanjie Ze"
+      ],
+      "fabricated_in_file": [
+        "Gu Zhang*",
+        "Yanjie Ze*"
+      ]
+    },
+    "sources": [
+      "DATA:dp3",
+      "PROFILES:unknown",
+      "SAVED_STATE:dp3",
+      "SAVED_STATE:n_3ddiffusionpol_48415"
+    ]
+  },
+  "2403.07788": {
+    "status": "authors_wrong",
+    "file_title": "DexCap",
+    "api_title": "DexCap: Scalable and Portable Mocap Data Collection System for Dexterous Manipulation",
+    "title_similarity": 0.13,
+    "correct_authors": [
+      "Chen Wang",
+      "Haochen Shi",
+      "Weizhuo Wang",
+      "Ruohan Zhang",
+      "Li Fei-Fei",
+      "C. Karen Liu"
+    ],
+    "file_authors": [
+      "Chen Wang",
+      "Haochen Shi",
+      "Weizhuo Wang",
+      "Ruizhen Hu",
+      "Zhiying Leng",
+      "Jing Zhang",
+      "Chongqing Wang",
+      "Hui Zhou",
+      "Bin Wang",
+      "Youyi Zheng"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 3,
+      "api_count": 6,
+      "file_count": 10,
+      "missing_from_file": [
+        "C. Karen Liu",
+        "Li Fei-Fei",
+        "Ruohan Zhang"
+      ],
+      "fabricated_in_file": [
+        "Bin Wang",
+        "Chongqing Wang",
+        "Hui Zhou",
+        "Jing Zhang",
+        "Ruizhen Hu",
+        "Youyi Zheng",
+        "Zhiying Leng"
+      ]
+    },
+    "sources": [
+      "DATA:n_dexcap_81782",
+      "SAVED_STATE:n_dexcap_81782"
+    ]
+  },
+  "2403.08629": {
+    "status": "correct",
+    "api_title": "Scaling Up Dynamic Human-Scene Interaction Modeling",
+    "sources": [
+      "SAVED_STATE:n_scalingupdynam_81782"
+    ]
+  },
+  "2403.09520": {
+    "status": "id_wrong_unrelated",
+    "file_title": "UniGraspTransformer",
+    "api_title": "Topological responses from gapped Weyl points in 2D altermagnets",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Kirill Parshukov",
+      "Raymond Wiedmann",
+      "Andreas P. Schnyder"
+    ],
+    "sources": [
+      "DATA:n_unigrasptransf_46639",
+      "SAVED_STATE:n_unigrasptransf_46639"
+    ]
+  },
+  "2403.10506": {
+    "status": "correct",
+    "api_title": "HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation",
+    "sources": [
+      "DATA:n_humanoidbench_10438",
+      "SAVED_STATE:n_humanoidbench_10438"
+    ]
+  },
+  "2403.12481": {
+    "status": "id_wrong_related",
+    "file_title": "HPT",
+    "api_title": "TT-BLIP: Enhancing Fake News Detection Using BLIP and Tri-Transformer",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Eunjee Choi",
+      "Jong-Kook Kim"
+    ],
+    "sources": [
+      "DATA:n_hpt_99133",
+      "SAVED_STATE:n_hpt_99133"
+    ]
+  },
+  "2403.12707": {
+    "status": "id_wrong_unrelated",
+    "file_title": "HOVER",
+    "api_title": "Selective Domain-Invariant Feature for Generalizable Deepfake Detection",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Yingxin Lai",
+      "Guoqing Yang Yifan He",
+      "Zhiming Luo",
+      "Shaozi Li"
+    ],
+    "sources": [
+      "DATA:n_hover_15886",
+      "SAVED_STATE:n_hover_15886"
+    ]
+  },
+  "2403.12945": {
+    "status": "id_wrong_related",
+    "file_title": "LeRobot",
+    "api_title": "DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Alexander Khazatsky",
+      "Karl Pertsch",
+      "Suraj Nair",
+      "Ashwin Balakrishna",
+      "Sudeep Dasari",
+      "Siddharth Karamcheti",
+      "Soroush Nasiriany",
+      "Mohan Kumar Srirama",
+      "Lawrence Yunliang Chen",
+      "Kirsty Ellis",
+      "Peter David Fagan",
+      "Joey Hejna",
+      "Masha Itkina",
+      "Marion Lepert",
+      "Yecheng Jason Ma",
+      "Patrick Tree Miller",
+      "Jimmy Wu",
+      "Suneel Belkhale",
+      "Shivin Dass",
+      "Huy Ha",
+      "Arhan Jain",
+      "Abraham Lee",
+      "Youngwoon Lee",
+      "Marius Memmel",
+      "Sungjae Park",
+      "Ilija Radosavovic",
+      "Kaiyuan Wang",
+      "Albert Zhan",
+      "Kevin Black",
+      "Cheng Chi",
+      "Kyle Beltran Hatch",
+      "Shan Lin",
+      "Jingpei Lu",
+      "Jean Mercat",
+      "Abdul Rehman",
+      "Pannag R Sanketi",
+      "Archit Sharma",
+      "Cody Simpson",
+      "Quan Vuong",
+      "Homer Rich Walke",
+      "Blake Wulfe",
+      "Ted Xiao",
+      "Jonathan Heewon Yang",
+      "Arefeh Yavary",
+      "Tony Z. Zhao",
+      "Christopher Agia",
+      "Rohan Baijal",
+      "Mateo Guaman Castro",
+      "Daphne Chen",
+      "Qiuyu Chen",
+      "Trinity Chung",
+      "Jaimyn Drake",
+      "Ethan Paul Foster",
+      "Jensen Gao",
+      "Vitor Guizilini",
+      "David Antonio Herrera",
+      "Minho Heo",
+      "Kyle Hsu",
+      "Jiaheng Hu",
+      "Muhammad Zubair Irshad",
+      "Donovon Jackson",
+      "Charlotte Le",
+      "Yunshuang Li",
+      "Kevin Lin",
+      "Roy Lin",
+      "Zehan Ma",
+      "Abhiram Maddukuri",
+      "Suvir Mirchandani",
+      "Daniel Morton",
+      "Tony Nguyen",
+      "Abigail O'Neill",
+      "Rosario Scalise",
+      "Derick Seale",
+      "Victor Son",
+      "Stephen Tian",
+      "Emi Tran",
+      "Andrew E. Wang",
+      "Yilin Wu",
+      "Annie Xie",
+      "Jingyun Yang",
+      "Patrick Yin",
+      "Yunchu Zhang",
+      "Osbert Bastani",
+      "Glen Berseth",
+      "Jeannette Bohg",
+      "Ken Goldberg",
+      "Abhinav Gupta",
+      "Abhishek Gupta",
+      "Dinesh Jayaraman",
+      "Joseph J Lim",
+      "Jitendra Malik",
+      "Roberto Martín-Martín",
+      "Subramanian Ramamoorthy",
+      "Dorsa Sadigh",
+      "Shuran Song",
+      "Jiajun Wu",
+      "Michael C. Yip",
+      "Yuke Zhu",
+      "Thomas Kollar",
+      "Sergey Levine",
+      "Chelsea Finn"
+    ],
+    "sources": [
+      "DATA:lerobot",
+      "PROFILES:unknown",
+      "SAVED_STATE:droid"
+    ]
+  },
+  "2403.13439": {
+    "status": "id_wrong_unrelated",
+    "file_title": "GROOT (Generalist Robot Policy via Behavior Foundation)",
+    "api_title": "Stochastic Geometry Models for Texture Synthesis of Machined Metallic Surfaces: Sandblasting and Milling",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Natascha Jeziorski",
+      "Claudia Redenbach"
+    ],
+    "sources": [
+      "SAVED_STATE:n_grootgeneralis_12494"
+    ]
+  },
+  "2404.05695": {
+    "status": "correct",
+    "api_title": "Humanoid-Gym: Reinforcement Learning for Humanoid Robot with Zero-Shot Sim2Real Transfer",
+    "sources": [
+      "DATA:n_humanoidgym_73877",
+      "SAVED_STATE:n_humanoidgym_73877"
+    ]
+  },
+  "2404.09254": {
+    "status": "id_wrong_unrelated",
+    "file_title": "VADER",
+    "api_title": "TEXT2TASTE: A Versatile Egocentric Vision System for Intelligent Reading Assistance Using Large Language Model",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Wiktor Mucha",
+      "Florin Cuconasu",
+      "Naome A. Etori",
+      "Valia Kalokyri",
+      "Giovanni Trappolini"
+    ],
+    "sources": [
+      "DATA:n_vader_46639",
+      "SAVED_STATE:n_vader_46639"
+    ]
+  },
+  "2404.13026": {
+    "status": "correct",
+    "api_title": "PhysDreamer: Physics-Based Interaction with 3D Objects via Video Generation",
+    "sources": [
+      "DATA:n_physdreamer_46639",
+      "SAVED_STATE:n_physdreamer_46639"
+    ]
+  },
+  "2405.02292": {
+    "status": "authors_wrong",
+    "file_title": "ALOHA 2",
+    "api_title": "ALOHA 2: An Enhanced Low-Cost Hardware for Bimanual Teleoperation",
+    "title_similarity": 0.2,
+    "correct_authors": [
+      "ALOHA 2 Team",
+      "Jorge Aldaco",
+      "Travis Armstrong",
+      "Robert Baruch",
+      "Jeff Bingham",
+      "Sanky Chan",
+      "Kenneth Draper",
+      "Debidatta Dwibedi",
+      "Chelsea Finn",
+      "Pete Florence",
+      "Spencer Goodrich",
+      "Wayne Gramlich",
+      "Torr Hage",
+      "Alexander Herzog",
+      "Jonathan Hoech",
+      "Thinh Nguyen",
+      "Ian Storz",
+      "Baruch Tabanpour",
+      "Leila Takayama",
+      "Jonathan Tompson",
+      "Ayzaan Wahid",
+      "Ted Wahrburg",
+      "Sichun Xu",
+      "Sergey Yaroshenko",
+      "Kevin Zakka",
+      "Tony Z. Zhao"
+    ],
+    "file_authors": [
+      "Tony Z. Zhao",
+      "Jonathan Tompson",
+      "Danny Driess",
+      "Pete Florence",
+      "Kamyar Ghasemipour",
+      "Chelsea Finn",
+      "Pannag R. Sanketi"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 4,
+      "api_count": 26,
+      "file_count": 7,
+      "missing_from_file": [
+        "ALOHA 2 Team",
+        "Alexander Herzog",
+        "Ayzaan Wahid",
+        "Baruch Tabanpour",
+        "Debidatta Dwibedi",
+        "Ian Storz",
+        "Jeff Bingham",
+        "Jonathan Hoech",
+        "Jorge Aldaco",
+        "Kenneth Draper",
+        "Kevin Zakka",
+        "Leila Takayama",
+        "Robert Baruch",
+        "Sanky Chan",
+        "Sergey Yaroshenko",
+        "Sichun Xu",
+        "Spencer Goodrich",
+        "Ted Wahrburg",
+        "Thinh Nguyen",
+        "Torr Hage",
+        "Travis Armstrong",
+        "Wayne Gramlich"
+      ],
+      "fabricated_in_file": [
+        "Danny Driess",
+        "Kamyar Ghasemipour",
+        "Pannag R. Sanketi"
+      ]
+    },
+    "sources": [
+      "DATA:n_aloha2_23957",
+      "SAVED_STATE:n_aloha2_23957"
+    ]
+  },
+  "2405.10315": {
+    "status": "authors_wrong",
+    "file_title": "TRANSIC",
+    "api_title": "TRANSIC: Sim-to-Real Policy Transfer by Learning from Online Correction",
+    "title_similarity": 0.19,
+    "correct_authors": [
+      "Yunfan Jiang",
+      "Chen Wang",
+      "Ruohan Zhang",
+      "Jiajun Wu",
+      "Li Fei-Fei"
+    ],
+    "file_authors": [
+      "Chengjian Feng",
+      "Yizheng Liu",
+      "Qiao Gu",
+      "Litian Liang",
+      "Zhuo Liu",
+      "Hao Chen"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 0,
+      "api_count": 5,
+      "file_count": 6,
+      "missing_from_file": [
+        "Chen Wang",
+        "Jiajun Wu",
+        "Li Fei-Fei",
+        "Ruohan Zhang",
+        "Yunfan Jiang"
+      ],
+      "fabricated_in_file": [
+        "Chengjian Feng",
+        "Hao Chen",
+        "Litian Liang",
+        "Qiao Gu",
+        "Yizheng Liu",
+        "Zhuo Liu"
+      ]
+    },
+    "sources": [
+      "DATA:n_transic_99133",
+      "SAVED_STATE:n_transic_99133"
+    ]
+  },
+  "2405.12213": {
+    "status": "authors_wrong",
+    "file_title": "Octo",
+    "api_title": "Octo: An Open-Source Generalist Robot Policy",
+    "title_similarity": 0.17,
+    "correct_authors": [
+      "Octo Model Team",
+      "Dibya Ghosh",
+      "Homer Walke",
+      "Karl Pertsch",
+      "Kevin Black",
+      "Oier Mees",
+      "Sudeep Dasari",
+      "Joey Hejna",
+      "Tobias Kreiman",
+      "Charles Xu",
+      "Jianlan Luo",
+      "You Liang Tan",
+      "Lawrence Yunliang Chen",
+      "Pannag Sanketi",
+      "Quan Vuong",
+      "Ted Xiao",
+      "Dorsa Sadigh",
+      "Chelsea Finn",
+      "Sergey Levine"
+    ],
+    "file_authors": [
+      "Dibya Ghosh",
+      "Homer Walke",
+      "Karl Pertsch",
+      "Kevin Black",
+      "Oier Mees",
+      "Sudeep Dasari",
+      "Joey Hejna",
+      "Tobias Kreiman",
+      "Charles Xu",
+      "Jianlan Luo",
+      "You Liang Tan",
+      "Lawrence Yunliang Chen",
+      "Pannag Sanketi",
+      "Quan Vuong",
+      "Ted Xiao",
+      "Dorsa Sadigh",
+      "Chelsea Finn",
+      "Sergey Levine"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 18,
+      "api_count": 19,
+      "file_count": 18,
+      "missing_from_file": [
+        "Octo Model Team"
+      ],
+      "fabricated_in_file": []
+    },
+    "sources": [
+      "DATA:octo",
+      "PROFILES:unknown",
+      "SAVED_STATE:octo"
+    ]
+  },
+  "2406.02523": {
+    "status": "correct",
+    "api_title": "RoboCasa: Large-Scale Simulation of Everyday Tasks for Generalist Robots",
+    "sources": [
+      "DATA:robocasa",
+      "PROFILES:unknown",
+      "SAVED_STATE:robocasa",
+      "SAVED_STATE:n_robocasa_10438"
+    ]
+  },
+  "2406.06105": {
+    "status": "correct",
+    "api_title": "The Evolution of Applications, Hardware Design, and Channel Modeling for Terahertz (THz) Band Communications and Sensing: Ready for 6G?",
+    "sources": [
+      "PROFILES:unknown"
+    ]
+  },
+  "2406.08858": {
+    "status": "authors_wrong",
+    "file_title": "OmniH2O",
+    "api_title": "OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning",
+    "title_similarity": 0.15,
+    "correct_authors": [
+      "Tairan He",
+      "Zhengyi Luo",
+      "Xialin He",
+      "Wenli Xiao",
+      "Chong Zhang",
+      "Weinan Zhang",
+      "Kris Kitani",
+      "Changliu Liu",
+      "Guanya Shi"
+    ],
+    "file_authors": [
+      "Binghao Huang",
+      "Yuanpei Chen",
+      "Yuzhe Qin",
+      "Yilin Wu",
+      "Puhao Li",
+      "Chengliang Zhong",
+      "Pengwei Xie",
+      "Jiaming Ji",
+      "Guoqiang Bao",
+      "Haoran Geng",
+      "Yaodong Yang",
+      "Xiaolong Wang"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 0,
+      "api_count": 9,
+      "file_count": 12,
+      "missing_from_file": [
+        "Changliu Liu",
+        "Chong Zhang",
+        "Guanya Shi",
+        "Kris Kitani",
+        "Tairan He",
+        "Weinan Zhang",
+        "Wenli Xiao",
+        "Xialin He",
+        "Zhengyi Luo"
+      ],
+      "fabricated_in_file": [
+        "Binghao Huang",
+        "Chengliang Zhong",
+        "Guoqiang Bao",
+        "Haoran Geng",
+        "Jiaming Ji",
+        "Pengwei Xie",
+        "Puhao Li",
+        "Xiaolong Wang",
+        "Yaodong Yang",
+        "Yilin Wu",
+        "Yuanpei Chen",
+        "Yuzhe Qin"
+      ]
+    },
+    "sources": [
+      "DATA:n_omnih2o_73877",
+      "SAVED_STATE:n_omnih2o_73877"
+    ]
+  },
+  "2406.09246": {
+    "status": "correct",
+    "api_title": "OpenVLA: An Open-Source Vision-Language-Action Model",
+    "sources": [
+      "DATA:openvla",
+      "PROFILES:unknown",
+      "PROFILES:unknown",
+      "PROFILES:unknown",
+      "SAVED_STATE:openvla",
+      "SAVED_STATE:n_unisim_33418",
+      "SAVED_STATE:n_robovlms_95712"
+    ]
+  },
+  "2406.09394": {
+    "status": "authors_wrong",
+    "file_title": "Wonderworld",
+    "api_title": "WonderWorld: Interactive 3D Scene Generation from a Single Image",
+    "title_similarity": 0.3,
+    "correct_authors": [
+      "Hong-Xing Yu",
+      "Haoyi Duan",
+      "Charles Herrmann",
+      "William T. Freeman",
+      "Jiajun Wu"
+    ],
+    "file_authors": [
+      "Hong-Xing Yu",
+      "Haoyi Duan",
+      "Yunzhi Zhang",
+      "Jiajun Wu"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 3,
+      "api_count": 5,
+      "file_count": 4,
+      "missing_from_file": [
+        "Charles Herrmann",
+        "William T. Freeman"
+      ],
+      "fabricated_in_file": [
+        "Yunzhi Zhang"
+      ]
+    },
+    "sources": [
+      "SAVED_STATE:n_wonderworld_95712"
+    ]
+  },
+  "2406.10454": {
+    "status": "authors_wrong",
+    "file_title": "HumanPlus",
+    "api_title": "HumanPlus: Humanoid Shadowing and Imitation from Humans",
+    "title_similarity": 0.29,
+    "correct_authors": [
+      "Zipeng Fu",
+      "Qingqing Zhao",
+      "Qi Wu",
+      "Gordon Wetzstein",
+      "Chelsea Finn"
+    ],
+    "file_authors": [
+      "Zipeng Fu*",
+      "Qingqing Zhao*",
+      "Qi Wu*",
+      "Gordon Wetzstein",
+      "Chelsea Finn"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 2,
+      "api_count": 5,
+      "file_count": 5,
+      "missing_from_file": [
+        "Qi Wu",
+        "Qingqing Zhao",
+        "Zipeng Fu"
+      ],
+      "fabricated_in_file": [
+        "Qi Wu*",
+        "Qingqing Zhao*",
+        "Zipeng Fu*"
+      ]
+    },
+    "sources": [
+      "DATA:humanplus",
+      "PROFILES:unknown",
+      "SAVED_STATE:humanplus"
+    ]
+  },
+  "2406.10721": {
+    "status": "authors_wrong",
+    "file_title": "RoboPoint",
+    "api_title": "RoboPoint: A Vision-Language Model for Spatial Affordance Prediction for Robotics",
+    "title_similarity": 0.2,
+    "correct_authors": [
+      "Wentao Yuan",
+      "Jiafei Duan",
+      "Valts Blukis",
+      "Wilbert Pumacay",
+      "Ranjay Krishna",
+      "Adithyavairavan Murali",
+      "Arsalan Mousavian",
+      "Dieter Fox"
+    ],
+    "file_authors": [
+      "Wanming Yu",
+      "Yixuan Wang",
+      "Yunzhu Li",
+      "Li Fei-Fei",
+      "Jiajun Wu"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 0,
+      "api_count": 8,
+      "file_count": 5,
+      "missing_from_file": [
+        "Adithyavairavan Murali",
+        "Arsalan Mousavian",
+        "Dieter Fox",
+        "Jiafei Duan",
+        "Ranjay Krishna",
+        "Valts Blukis",
+        "Wentao Yuan",
+        "Wilbert Pumacay"
+      ],
+      "fabricated_in_file": [
+        "Jiajun Wu",
+        "Li Fei-Fei",
+        "Wanming Yu",
+        "Yixuan Wang",
+        "Yunzhu Li"
+      ]
+    },
+    "sources": [
+      "DATA:n_robopoint_23957",
+      "SAVED_STATE:n_robopoint_23957"
+    ]
+  },
+  "2406.18844": {
+    "status": "id_wrong_unrelated",
+    "file_title": "OpenEQA",
+    "api_title": "Revisiting Backdoor Attacks against Large Vision-Language Models from Domain Shift",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Siyuan Liang",
+      "Jiawei Liang",
+      "Tianyu Pang",
+      "Chao Du",
+      "Aishan Liu",
+      "Mingli Zhu",
+      "Xiaochun Cao",
+      "Dacheng Tao"
+    ],
+    "sources": [
+      "DATA:n_openeqa_10438",
+      "SAVED_STATE:n_openeqa_10438"
+    ]
+  },
+  "2407.00889": {
+    "status": "id_wrong_related",
+    "file_title": "Unitree H1",
+    "api_title": "Non-Prehensile Aerial Manipulation using Model-Based Deep Reinforcement Learning",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Cora A. Dimmig",
+      "Marin Kobilarov"
+    ],
+    "sources": [
+      "DATA:n_unitreeh1_29732",
+      "SAVED_STATE:n_unitreeh1_29732"
+    ]
+  },
+  "2407.01392": {
+    "status": "correct",
+    "api_title": "Diffusion Forcing: Next-token Prediction Meets Full-Sequence Diffusion",
+    "sources": [
+      "SAVED_STATE:n_diffusionforci_55275"
+    ]
+  },
+  "2407.01512": {
+    "status": "authors_wrong",
+    "file_title": "Open-TeleVision",
+    "api_title": "Open-TeleVision: Teleoperation with Immersive Active Visual Feedback",
+    "title_similarity": 0.35,
+    "correct_authors": [
+      "Xuxin Cheng",
+      "Jialong Li",
+      "Shiqi Yang",
+      "Ge Yang",
+      "Xiaolong Wang"
+    ],
+    "file_authors": [
+      "Yifei Zhao",
+      "Pengchuan Zhao",
+      "Zhengqiang Gu",
+      "Zhengqiang Li",
+      "Wanyu Yang",
+      "Haoran Li",
+      "Gordon Wetzstein",
+      "Yunzhu Li"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 0,
+      "api_count": 5,
+      "file_count": 8,
+      "missing_from_file": [
+        "Ge Yang",
+        "Jialong Li",
+        "Shiqi Yang",
+        "Xiaolong Wang",
+        "Xuxin Cheng"
+      ],
+      "fabricated_in_file": [
+        "Gordon Wetzstein",
+        "Haoran Li",
+        "Pengchuan Zhao",
+        "Wanyu Yang",
+        "Yifei Zhao",
+        "Yunzhu Li",
+        "Zhengqiang Gu",
+        "Zhengqiang Li"
+      ]
+    },
+    "sources": [
+      "DATA:n_opentelevision_29732",
+      "SAVED_STATE:n_opentelevision_29732"
+    ]
+  },
+  "2407.10792": {
+    "status": "id_wrong_unrelated",
+    "file_title": "UniSafe",
+    "api_title": "Two-row Delta Springer varieties",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Abel Lacabanne",
+      "Pedro Vaz",
+      "Arik Wilbert"
+    ],
+    "sources": [
+      "SAVED_STATE:n_unisafe_95712"
+    ]
+  },
+  "2407.17032": {
+    "status": "authors_wrong",
+    "file_title": "Gymnasium",
+    "api_title": "Gymnasium: A Standard Interface for Reinforcement Learning Environments",
+    "title_similarity": 0.23,
+    "correct_authors": [
+      "Mark Towers",
+      "Ariel Kwiatkowski",
+      "Jordan Terry",
+      "John U. Balis",
+      "Gianluca De Cola",
+      "Tristan Deleu",
+      "Manuel Goulão",
+      "Andreas Kallinteris",
+      "Markus Krimmel",
+      "Arjun KG",
+      "Rodrigo Perez-Vicente",
+      "Andrea Pierré",
+      "Sander Schulhoff",
+      "Jun Jet Tai",
+      "Hannah Tan",
+      "Omar G. Younis"
+    ],
+    "file_authors": [
+      "Mark Towers",
+      "Ariel Kwiatkowski",
+      "Jordan Terry",
+      "John U. Balis",
+      "Gianluca De Cola",
+      "Tristan Deleu",
+      "Manuel Goulão",
+      "Andreas Kallinteris",
+      "Markus Krimmel",
+      "Rodrigo Perez-Vicente",
+      "Andrea Pierré",
+      "Sander Schulhoff",
+      "Jun Jet Tai",
+      "Hannah Tan",
+      "Omar G. Younis"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 15,
+      "api_count": 16,
+      "file_count": 15,
+      "missing_from_file": [
+        "Arjun KG"
+      ],
+      "fabricated_in_file": []
+    },
+    "sources": [
+      "DATA:gymnasium",
+      "SAVED_STATE:gymnasium"
+    ]
+  },
+  "2407.20515": {
+    "status": "id_wrong_unrelated",
+    "file_title": "GR00T",
+    "api_title": "Markers Identification for Relative Pose Estimation of an Uncooperative Target",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Batu Candan",
+      "Simone Servadio"
+    ],
+    "sources": [
+      "SAVED_STATE:n_gr00t_81782"
+    ]
+  },
+  "2408.11812": {
+    "status": "id_wrong_related",
+    "file_title": "CrossFormer",
+    "api_title": "Scaling Cross-Embodied Learning: One Policy for Manipulation, Navigation, Locomotion and Aviation",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Ria Doshi",
+      "Homer Walke",
+      "Oier Mees",
+      "Sudeep Dasari",
+      "Sergey Levine"
+    ],
+    "sources": [
+      "DATA:crossformer",
+      "SAVED_STATE:crossformer"
+    ]
+  },
+  "2408.14472": {
+    "status": "correct",
+    "api_title": "Advancing Humanoid Locomotion: Mastering Challenging Terrains with Denoising World Model Learning",
+    "sources": [
+      "PROFILES:unknown"
+    ]
+  },
+  "2409.01889": {
+    "status": "id_wrong_unrelated",
+    "file_title": "ReKep",
+    "api_title": "Weakly Leveled Planarity with Bounded Span",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Michael Bekos",
+      "Giordano Da Lozzo",
+      "Fabrizio Frati",
+      "Siddharth Gupta",
+      "Philipp Kindermann",
+      "Giuseppe Liotta",
+      "Ignaz Rutter",
+      "Ioannis G. Tollis"
+    ],
+    "sources": [
+      "SAVED_STATE:n_rekep_85476"
+    ]
+  },
+  "2409.02920": {
+    "status": "authors_wrong",
+    "file_title": "RoboTwin",
+    "api_title": "RoboTwin: Dual-Arm Robot Benchmark with Generative Digital Twins (early version)",
+    "title_similarity": 0.19,
+    "correct_authors": [
+      "Yao Mu",
+      "Tianxing Chen",
+      "Shijia Peng",
+      "Zanxin Chen",
+      "Zeyu Gao",
+      "Yude Zou",
+      "Lunkai Lin",
+      "Zhiqiang Xie",
+      "Ping Luo"
+    ],
+    "file_authors": [
+      "Yao Mu*（共一）",
+      "Tianxing Chen*（共一）",
+      "Zanxin Chen",
+      "Shijia Peng",
+      "Zeyu Gao",
+      "Yude Zou",
+      "Lunkai Lin",
+      "Zhiqiang Xie",
+      "Ping Luo（1.0版本）"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 6,
+      "api_count": 9,
+      "file_count": 9,
+      "missing_from_file": [
+        "Ping Luo",
+        "Tianxing Chen",
+        "Yao Mu"
+      ],
+      "fabricated_in_file": [
+        "Ping Luo（1.0版本）",
+        "Tianxing Chen*（共一）",
+        "Yao Mu*（共一）"
+      ]
+    },
+    "sources": [
+      "DATA:robotwin",
+      "PROFILES:unknown",
+      "SAVED_STATE:robotwin"
+    ]
+  },
+  "2409.16164": {
+    "status": "id_wrong_unrelated",
+    "file_title": "Gen2Act",
+    "api_title": "Study of the Involvement of $^8$Be and $^9$B Nuclei in the Dissociation of Relativistic $^{10}$C, $^{10}$B, and $^{12}$C Nuclei",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "D. A. Artemenkov",
+      "V. Bradnova",
+      "G. I. Britvich",
+      "A. A. Zaitsev",
+      "P. I. Zarubin",
+      "I. G. Zarubina",
+      "V. A. Kalinin",
+      "R. R. Kattabekov",
+      "N. K. Kornegrutsa",
+      "M. Yu. Kostin",
+      "A. V. Maksimov",
+      "K. Z. Mamatkulov",
+      "E. Mitseva",
+      "A. Neagu",
+      "V. A. Pikalov",
+      "M. K. Polkovnikov",
+      "P. A. Rukoyatkin",
+      "V. V. Rusakova",
+      "V. R. Sarkisyan",
+      "R. Stanoeva",
+      "E. Firu",
+      "M. Haiduc",
+      "S. P. Kharlamov"
+    ],
+    "sources": [
+      "SAVED_STATE:n_gen2act_15886"
+    ]
+  },
+  "2410.00425": {
+    "status": "authors_wrong",
+    "file_title": "ManiSkill3",
+    "api_title": "ManiSkill3: GPU Parallelized Robotics Simulation and Rendering for Generalizable Embodied AI",
+    "title_similarity": 0.2,
+    "correct_authors": [
+      "Stone Tao",
+      "Fanbo Xiang",
+      "Arth Shukla",
+      "Yuzhe Qin",
+      "Xander Hinrichsen",
+      "Xiaodi Yuan",
+      "Chen Bao",
+      "Xinsong Lin",
+      "Yulin Liu",
+      "Tse-kai Chan",
+      "Yuan Gao",
+      "Xuanlin Li",
+      "Tongzhou Mu",
+      "Nan Xiao",
+      "Arnav Gurha",
+      "Viswesh Nagaswamy Rajesh",
+      "Yong Woo Choi",
+      "Yen-Ru Chen",
+      "Zhiao Huang",
+      "Roberto Calandra",
+      "Rui Chen",
+      "Shan Luo",
+      "Hao Su"
+    ],
+    "file_authors": [
+      "Stone Tao",
+      "Fanbo Xiang",
+      "Arth Shukla",
+      "Yuzhe Qin",
+      "Xander Hinrichsen",
+      "Xiaodi Yuan",
+      "Chen Bao",
+      "Xinsong Lin",
+      "Yulin Liu",
+      "Tse-kai Chan",
+      "Yuan Gao",
+      "Xuanlin Li",
+      "Tongzhou Mu",
+      "…（UCSD / Hillbot，共23人）"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 13,
+      "api_count": 23,
+      "file_count": 14,
+      "missing_from_file": [
+        "Arnav Gurha",
+        "Hao Su",
+        "Nan Xiao",
+        "Roberto Calandra",
+        "Rui Chen",
+        "Shan Luo",
+        "Viswesh Nagaswamy Rajesh",
+        "Yen-Ru Chen",
+        "Yong Woo Choi",
+        "Zhiao Huang"
+      ],
+      "fabricated_in_file": [
+        "…（UCSD / Hillbot，共23人）"
+      ]
+    },
+    "sources": [
+      "DATA:maniskill3",
+      "PROFILES:unknown",
+      "SAVED_STATE:maniskill3"
+    ]
+  },
+  "2410.01741": {
+    "status": "id_wrong_unrelated",
+    "file_title": "ACE",
+    "api_title": "Discrete-Time LQ Stochastic Two-Person Nonzero-Sum Difference Games with Random Coefficients:~Open-Loop Nash Equilibrium",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Yiwei Wu",
+      "Xun Li",
+      "Qingxin Meng"
+    ],
+    "sources": [
+      "SAVED_STATE:n_ace_62590"
+    ]
+  },
+  "2410.02263": {
+    "status": "id_wrong_unrelated",
+    "file_title": "ManiFoundation",
+    "api_title": "The Disk Wind Contribution to the Gamma-Ray emission from the nearby Seyfert Galaxy GRS 1734-292",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Nobuyuki Sakai",
+      "Tomoya Yamada",
+      "Yoshiyuki Inoue",
+      "Ellis R. Owen",
+      "Tomonari Michiyama",
+      "Ryota Tomaru",
+      "Yasushi Fukazawa"
+    ],
+    "sources": [
+      "DATA:n_manifoundation_23957",
+      "SAVED_STATE:n_manifoundation_23957"
+    ]
+  },
+  "2410.05273": {
+    "status": "authors_wrong",
+    "file_title": "HiRT",
+    "api_title": "HiRT: Enhancing Robotic Control with Hierarchical Robot Transformers",
+    "title_similarity": 0.11,
+    "correct_authors": [
+      "Jianke Zhang",
+      "Yanjiang Guo",
+      "Xiaoyu Chen",
+      "Yen-Jen Wang",
+      "Yucheng Hu",
+      "Chengming Shi",
+      "Jianyu Chen"
+    ],
+    "file_authors": [
+      "Jianke Zhang",
+      "Yanming Wang",
+      "Yifei Chen",
+      "Xiaohu Li",
+      "Mingyu Liu",
+      "Rongtao Xu",
+      "Shanghang Zhang",
+      "Huazhe Xu"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 1,
+      "api_count": 7,
+      "file_count": 8,
+      "missing_from_file": [
+        "Chengming Shi",
+        "Jianyu Chen",
+        "Xiaoyu Chen",
+        "Yanjiang Guo",
+        "Yen-Jen Wang",
+        "Yucheng Hu"
+      ],
+      "fabricated_in_file": [
+        "Huazhe Xu",
+        "Mingyu Liu",
+        "Rongtao Xu",
+        "Shanghang Zhang",
+        "Xiaohu Li",
+        "Yanming Wang",
+        "Yifei Chen"
+      ]
+    },
+    "sources": [
+      "SAVED_STATE:n_hirt_12494"
+    ]
+  },
+  "2410.06158": {
+    "status": "authors_wrong",
+    "file_title": "GR-2",
+    "api_title": "GR-2: A Generative Video-Language-Action Model with Web-Scale Knowledge for Robot Manipulation",
+    "title_similarity": 0.07,
+    "correct_authors": [
+      "Chi-Lam Cheang",
+      "Guangzeng Chen",
+      "Ya Jing",
+      "Tao Kong",
+      "Hang Li",
+      "Yifeng Li",
+      "Yuxiao Liu",
+      "Hongtao Wu",
+      "Jiafeng Xu",
+      "Yichu Yang",
+      "Hanbo Zhang",
+      "Minzhao Zhu"
+    ],
+    "file_authors": [
+      "Jiangyong Huang",
+      "Silong Yong",
+      "Xinhang Liu",
+      "Yan Ding",
+      "Xiaojian Ma",
+      "Bing Han",
+      "Zongwu Xie",
+      "Yang Gao"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 0,
+      "api_count": 12,
+      "file_count": 8,
+      "missing_from_file": [
+        "Chi-Lam Cheang",
+        "Guangzeng Chen",
+        "Hanbo Zhang",
+        "Hang Li",
+        "Hongtao Wu",
+        "Jiafeng Xu",
+        "Minzhao Zhu",
+        "Tao Kong",
+        "Ya Jing",
+        "Yichu Yang",
+        "Yifeng Li",
+        "Yuxiao Liu"
+      ],
+      "fabricated_in_file": [
+        "Bing Han",
+        "Jiangyong Huang",
+        "Silong Yong",
+        "Xiaojian Ma",
+        "Xinhang Liu",
+        "Yan Ding",
+        "Yang Gao",
+        "Zongwu Xie"
+      ]
+    },
+    "sources": [
+      "SAVED_STATE:n_gr2_29732",
+      "SAVED_STATE:n_fouriergr2_55362"
+    ]
+  },
+  "2410.07655": {
+    "status": "id_wrong_unrelated",
+    "file_title": "RoboDuet",
+    "api_title": "Sobolev and Hölder estimates for the $\\overline \\partial$ equation on pseudoconvex domains of finite type in $\\mathbb C^2$",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Ziming Shi"
+    ],
+    "sources": [
+      "DATA:n_roboduet_99133",
+      "SAVED_STATE:n_roboduet_99133"
+    ]
+  },
+  "2410.07864": {
+    "status": "correct",
+    "api_title": "RDT-1B: a Diffusion Foundation Model for Bimanual Manipulation",
+    "sources": [
+      "DATA:rdt1b",
+      "PROFILES:unknown",
+      "PROFILES:unknown",
+      "SAVED_STATE:rdt1b"
+    ]
+  },
+  "2410.09821": {
+    "status": "id_wrong_unrelated",
+    "file_title": "RoboEXP",
+    "api_title": "DAS3D: Dual-modality Anomaly Synthesis for 3D Anomaly Detection",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Kecen Li",
+      "Bingquan Dai",
+      "Jingjing Fu",
+      "Xinwen Hou"
+    ],
+    "sources": [
+      "DATA:n_roboexp_23957",
+      "SAVED_STATE:n_roboexp_23957"
+    ]
+  },
+  "2410.10034": {
+    "status": "id_wrong_unrelated",
+    "file_title": "PIVOT-R",
+    "api_title": "TULIP: Token-length Upgraded CLIP",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Ivona Najdenkoska",
+      "Mohammad Mahdi Derakhshani",
+      "Yuki M. Asano",
+      "Nanne van Noord",
+      "Marcel Worring",
+      "Cees G. M. Snoek"
+    ],
+    "sources": [
+      "DATA:n_pivotr_96641",
+      "SAVED_STATE:n_pivotr_96641"
+    ]
+  },
+  "2410.10076": {
+    "status": "id_wrong_unrelated",
+    "file_title": "Bunny-VisionPro",
+    "api_title": "VideoAgent: Self-Improving Video Generation",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Achint Soni",
+      "Sreyas Venkataraman",
+      "Abhranil Chandra",
+      "Sebastian Fischmeister",
+      "Percy Liang",
+      "Bo Dai",
+      "Sherry Yang"
+    ],
+    "sources": [
+      "DATA:n_bunnyvisionpro_96641",
+      "SAVED_STATE:n_bunnyvisionpro_96641"
+    ]
+  },
+  "2410.10742": {
+    "status": "id_wrong_unrelated",
+    "file_title": "PIVOT",
+    "api_title": "The primordial non-Gaussianities for non-singular Horndeski cosmologies",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Y. Ageeva",
+      "M. Kotenko",
+      "P. Petrov"
+    ],
+    "sources": [
+      "DATA:n_pivot_48415",
+      "SAVED_STATE:n_pivot_48415"
+    ]
+  },
+  "2410.10878": {
+    "status": "id_wrong_unrelated",
+    "file_title": "RoboGrind",
+    "api_title": "Herald: A Natural Language Annotated Lean 4 Dataset",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Guoxiong Gao",
+      "Yutong Wang",
+      "Jiedong Jiang",
+      "Qi Gao",
+      "Zihan Qin",
+      "Tianyi Xu",
+      "Bin Dong"
+    ],
+    "sources": [
+      "DATA:n_robogrind_99133",
+      "SAVED_STATE:n_robogrind_99133"
+    ]
+  },
+  "2410.11671": {
+    "status": "id_wrong_related",
+    "file_title": "OpenR",
+    "api_title": "Safety Filtering While Training: Improving the Performance and Sample Efficiency of Reinforcement Learning Agents",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Federico Pizarro Bejarano",
+      "Lukas Brunke",
+      "Angela P. Schoellig"
+    ],
+    "sources": [
+      "DATA:n_openr_23957",
+      "SAVED_STATE:n_openr_23957"
+    ]
+  },
+  "2410.13939": {
+    "status": "id_wrong_unrelated",
+    "file_title": "DexGraspNet 2.0",
+    "api_title": "A search for self-lensing binaries with TESS and constraints on their occurrence rate",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Natsuko Yamaguchi",
+      "Kareem El-Badry",
+      "Nicholas M. Sorabella"
+    ],
+    "sources": [
+      "DATA:n_dexgraspnet20_55275",
+      "SAVED_STATE:n_dexgraspnet20_55275"
+    ]
+  },
+  "2410.17008": {
+    "status": "id_wrong_unrelated",
+    "file_title": "RoboCook",
+    "api_title": "Double-Side Delay Alignment Modulation for Multi-User Millimeter Wave and TeraHertz Communications",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Xingwei Wang",
+      "Haiquan Lu",
+      "Jieni Zhang",
+      "Yong Zeng"
+    ],
+    "sources": [
+      "DATA:n_robocook_62591",
+      "SAVED_STATE:n_robocook_62591"
+    ]
+  },
+  "2410.22018": {
+    "status": "id_wrong_unrelated",
+    "file_title": "RoboPEPP",
+    "api_title": "Room temperature Multiferroicity and Magnetoelectric coupling in Ca/Mn modified BaTiO3",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "P. Maneesha",
+      "Koyal Suman Samantaray",
+      "Rakhi Saha",
+      "Rajashri Urkude",
+      "Biplab Ghosh",
+      "Arjun K Pathak",
+      "Indranil Bhaumik",
+      "Abdelkrim Mekki",
+      "Khalil Harrabi",
+      "Somaditya Sen"
+    ],
+    "sources": [
+      "DATA:n_robopepp_15886",
+      "SAVED_STATE:n_robopepp_15886"
+    ]
+  },
+  "2410.22289": {
+    "status": "id_wrong_unrelated",
+    "file_title": "GR-MG",
+    "api_title": "Misconceptions, Pragmatism, and Value Tensions: Evaluating Students' Understanding and Perception of Generative AI for Education",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Aditya Johri",
+      "Ashish Hingle",
+      "Johannes Schleiss"
+    ],
+    "sources": [
+      "DATA:n_grmg_62591",
+      "SAVED_STATE:n_grmg_62591"
+    ]
+  },
+  "2410.24164": {
+    "status": "id_wrong_related",
+    "file_title": "π₀",
+    "api_title": "$π_0$: A Vision-Language-Action Flow Model for General Robot Control",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Kevin Black",
+      "Noah Brown",
+      "Danny Driess",
+      "Adnan Esmail",
+      "Michael Equi",
+      "Chelsea Finn",
+      "Niccolo Fusai",
+      "Lachy Groom",
+      "Karol Hausman",
+      "Brian Ichter",
+      "Szymon Jakubczak",
+      "Tim Jones",
+      "Liyiming Ke",
+      "Sergey Levine",
+      "Adrian Li-Bell",
+      "Mohith Mothukuri",
+      "Suraj Nair",
+      "Karl Pertsch",
+      "Lucy Xiaoyang Shi",
+      "James Tanner",
+      "Quan Vuong",
+      "Anna Walling",
+      "Haohuan Wang",
+      "Ury Zhilinsky"
+    ],
+    "sources": [
+      "DATA:pi0",
+      "PROFILES:unknown",
+      "PROFILES:unknown",
+      "SAVED_STATE:pi0",
+      "SAVED_STATE:n_pizero_71625"
+    ]
+  },
+  "2410.24766": {
+    "status": "not_found",
+    "file_title": "Optimus",
+    "sources": [
+      "DATA:n_optimus_15886",
+      "SAVED_STATE:n_optimus_15886"
+    ]
+  },
+  "2410.24874": {
+    "status": "not_found",
+    "file_title": "Robotic Offline RL",
+    "sources": [
+      "DATA:n_roboticoffline_55275",
+      "SAVED_STATE:n_roboticoffline_55275"
+    ]
+  },
+  "2411.19650": {
+    "status": "authors_wrong",
+    "file_title": "CogACT",
+    "api_title": "CogACT: A Foundational Vision-Language-Action Model for Synergizing Cognition and Action in Robotic Manipulation",
+    "title_similarity": 0.1,
+    "correct_authors": [
+      "Qixiu Li",
+      "Yaobo Liang",
+      "Zeyu Wang",
+      "Lin Luo",
+      "Xi Chen",
+      "Mozheng Liao",
+      "Fangyun Wei",
+      "Yu Deng",
+      "Sicheng Xu",
+      "Yizhong Zhang",
+      "Xiaofan Wang",
+      "Bei Liu",
+      "Jianlong Fu",
+      "Jianmin Bao",
+      "Dong Chen",
+      "Yuanchun Shi",
+      "Jiaolong Yang",
+      "Baining Guo"
+    ],
+    "file_authors": [
+      "Qiuyu Chen",
+      "Zhen Tan",
+      "Jingli Lin",
+      "Zhengrong Xue",
+      "Zhenyu Jiang",
+      "Yuke Zhu",
+      "Huaxiu Yao"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 0,
+      "api_count": 18,
+      "file_count": 7,
+      "missing_from_file": [
+        "Baining Guo",
+        "Bei Liu",
+        "Dong Chen",
+        "Fangyun Wei",
+        "Jianlong Fu",
+        "Jianmin Bao",
+        "Jiaolong Yang",
+        "Lin Luo",
+        "Mozheng Liao",
+        "Qixiu Li",
+        "Sicheng Xu",
+        "Xi Chen",
+        "Xiaofan Wang",
+        "Yaobo Liang",
+        "Yizhong Zhang",
+        "Yu Deng",
+        "Yuanchun Shi",
+        "Zeyu Wang"
+      ],
+      "fabricated_in_file": [
+        "Huaxiu Yao",
+        "Jingli Lin",
+        "Qiuyu Chen",
+        "Yuke Zhu",
+        "Zhen Tan",
+        "Zhengrong Xue",
+        "Zhenyu Jiang"
+      ]
+    },
+    "sources": [
+      "SAVED_STATE:n_cogact_95712"
+    ]
+  },
+  "2412.06173": {
+    "status": "id_wrong_unrelated",
+    "file_title": "OpenVLA-OFT: Fine-Tuning VLA with Optimized Fine-Tuning",
+    "api_title": "Revisiting the Necessity of Graph Learning and Common Graph Benchmarks",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Isay Katsman",
+      "Ethan Lou",
+      "Anna Gilbert"
+    ],
+    "sources": [
+      "PROFILES:unknown"
+    ]
+  },
+  "2412.10345": {
+    "status": "authors_wrong",
+    "file_title": "TraceVLA",
+    "api_title": "TraceVLA: Visual Trace Prompting Enhances Spatial-Temporal Awareness for Generalist Robotic Policies",
+    "title_similarity": 0.15,
+    "correct_authors": [
+      "Ruijie Zheng",
+      "Yongyuan Liang",
+      "Shuaiyi Huang",
+      "Jianfeng Gao",
+      "Hal Daumé",
+      "Andrey Kolobov",
+      "Furong Huang",
+      "Jianwei Yang"
+    ],
+    "file_authors": [
+      "Ruijie Zheng",
+      "Yongyuan Liang",
+      "Shuaiyi Huang",
+      "Jianfeng Gao",
+      "Hal Daumé III",
+      "Andong Cao",
+      "Huazhe Xu",
+      "Furong Huang"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 5,
+      "api_count": 8,
+      "file_count": 8,
+      "missing_from_file": [
+        "Andrey Kolobov",
+        "Hal Daumé",
+        "Jianwei Yang"
+      ],
+      "fabricated_in_file": [
+        "Andong Cao",
+        "Hal Daumé III",
+        "Huazhe Xu"
+      ]
+    },
+    "sources": [
+      "DATA:tracevla",
+      "PROFILES:unknown",
+      "SAVED_STATE:tracevla"
+    ]
+  },
+  "2412.13877": {
+    "status": "authors_wrong",
+    "file_title": "RoboMIND",
+    "api_title": "RoboMIND: Benchmark on Multi-embodiment Intelligence Normative Data for Robot Manipulation",
+    "title_similarity": 0.17,
+    "correct_authors": [
+      "Kun Wu",
+      "Chengkai Hou",
+      "Jiaming Liu",
+      "Zhengping Che",
+      "Xiaozhu Ju",
+      "Zhuqin Yang",
+      "Meng Li",
+      "Yinuo Zhao",
+      "Zhiyuan Xu",
+      "Guang Yang",
+      "Shichao Fan",
+      "Xinhua Wang",
+      "Fei Liao",
+      "Zhen Zhao",
+      "Guangyu Li",
+      "Zhao Jin",
+      "Lecheng Wang",
+      "Jilei Mao",
+      "Ning Liu",
+      "Pei Ren",
+      "Qiang Zhang",
+      "Yaoxu Lyu",
+      "Mengzhen Liu",
+      "Jingyang He",
+      "Yulin Luo",
+      "Zeyu Gao",
+      "Chenxuan Li",
+      "Chenyang Gu",
+      "Yankai Fu",
+      "Di Wu",
+      "Xingyu Wang",
+      "Sixiang Chen",
+      "Zhenyu Wang",
+      "Pengju An",
+      "Siyuan Qian",
+      "Shanghang Zhang",
+      "Jian Tang"
+    ],
+    "file_authors": [
+      "Yuhao Chen",
+      "Xiaolong Wang",
+      "Yuchen Cui",
+      "Hao Su",
+      "et al."
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 0,
+      "api_count": 37,
+      "file_count": 4,
+      "missing_from_file": [
+        "Chengkai Hou",
+        "Chenxuan Li",
+        "Chenyang Gu",
+        "Di Wu",
+        "Fei Liao",
+        "Guang Yang",
+        "Guangyu Li",
+        "Jiaming Liu",
+        "Jian Tang",
+        "Jilei Mao",
+        "Jingyang He",
+        "Kun Wu",
+        "Lecheng Wang",
+        "Meng Li",
+        "Mengzhen Liu",
+        "Ning Liu",
+        "Pei Ren",
+        "Pengju An",
+        "Qiang Zhang",
+        "Shanghang Zhang",
+        "Shichao Fan",
+        "Sixiang Chen",
+        "Siyuan Qian",
+        "Xiaozhu Ju",
+        "Xingyu Wang",
+        "Xinhua Wang",
+        "Yankai Fu",
+        "Yaoxu Lyu",
+        "Yinuo Zhao",
+        "Yulin Luo",
+        "Zeyu Gao",
+        "Zhao Jin",
+        "Zhen Zhao",
+        "Zhengping Che",
+        "Zhenyu Wang",
+        "Zhiyuan Xu",
+        "Zhuqin Yang"
+      ],
+      "fabricated_in_file": [
+        "Hao Su",
+        "Xiaolong Wang",
+        "Yuchen Cui",
+        "Yuhao Chen"
+      ]
+    },
+    "sources": [
+      "SAVED_STATE:n_robomind_33418"
+    ]
+  },
+  "2501.03257": {
+    "status": "id_wrong_unrelated",
+    "file_title": "OpenVLA-OFT: Fine-Tuning Vision-Language-Action Models",
+    "api_title": "Breaking Through the Spike: Spike Window Decoding for Accelerated and Precise Automatic Speech Recognition",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Wei Zhang",
+      "Tian-Hao Zhang",
+      "Chao Luo",
+      "Hui Zhou",
+      "Chao Yang",
+      "Xinyuan Qian",
+      "Xu-Cheng Yin"
+    ],
+    "sources": [
+      "PROFILES:unknown"
+    ]
+  },
+  "2501.08687": {
+    "status": "id_wrong_unrelated",
+    "file_title": "HumanVLA",
+    "api_title": "Preformed Cooper Pairs in a Triclinic Iron Pnictide Superconductor",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Zezhong Li",
+      "Wenshan Hong",
+      "Honglin Zhou",
+      "Xiaoyan Ma",
+      "Uwe Stuhr",
+      "Kaiyue Zeng",
+      "Long Ma",
+      "Ying Xiang",
+      "Huan Yang",
+      "Hai-Hu Wen",
+      "Jiangping Hu",
+      "Shiliang Li",
+      "Huiqian Luo"
+    ],
+    "sources": [
+      "DATA:n_humanvla_28747",
+      "SAVED_STATE:n_humanvla_28747"
+    ]
+  },
+  "2501.09180": {
+    "status": "id_wrong_related",
+    "file_title": "DynaMo",
+    "api_title": "Numerical approximation of Caputo-type advection-diffusion equations via Sylvester equations",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Francisco de la Hoz",
+      "Peru Muniain"
+    ],
+    "sources": [
+      "DATA:n_dynamo_28747",
+      "SAVED_STATE:n_dynamo_28747"
+    ]
+  },
+  "2501.09447": {
+    "status": "id_wrong_unrelated",
+    "file_title": "DexH2R",
+    "api_title": "Auslander regular algebras and Coxeter matrices",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Viktória Klász",
+      "Rene Marczinzik",
+      "Hugh Thomas"
+    ],
+    "sources": [
+      "DATA:n_dexh2r_28747",
+      "SAVED_STATE:n_dexh2r_28747"
+    ]
+  },
+  "2501.10432": {
+    "status": "id_wrong_unrelated",
+    "file_title": "AnyRotate",
+    "api_title": "Induced spin velocity of the Earth and its influence to the seasonal variation of the Earth's angular velocity",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Kostadin Trencevski",
+      "Emilija Celakoska"
+    ],
+    "sources": [
+      "DATA:n_anyrotate_28747",
+      "SAVED_STATE:n_anyrotate_28747"
+    ]
+  },
+  "2501.11247": {
+    "status": "id_wrong_unrelated",
+    "file_title": "SPEAR",
+    "api_title": "Multivariate Wireless Link Quality Prediction Based on Pre-trained Large Language Models",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Zhuangzhuang Yan",
+      "Xinyu Gu",
+      "Shilong Fan",
+      "Zhenyu Liu"
+    ],
+    "sources": [
+      "DATA:n_spear_28747",
+      "SAVED_STATE:n_spear_28747"
+    ]
+  },
+  "2502.19645": {
+    "status": "id_wrong_related",
+    "file_title": "OpenVLA-OFT",
+    "api_title": "Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Moo Jin Kim",
+      "Chelsea Finn",
+      "Percy Liang"
+    ],
+    "sources": [
+      "DATA:openvlaoft",
+      "SAVED_STATE:openvlaoft"
+    ]
+  },
+  "2503.06669": {
+    "status": "id_wrong_related",
+    "file_title": "Fourier GR-2",
+    "api_title": "AgiBot World Colosseo: A Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "AgiBot-World-Contributors",
+      "Qingwen Bu",
+      "Jisong Cai",
+      "Li Chen",
+      "Xiuqi Cui",
+      "Yan Ding",
+      "Siyuan Feng",
+      "Shenyuan Gao",
+      "Xindong He",
+      "Xuan Hu",
+      "Xu Huang",
+      "Shu Jiang",
+      "Yuxin Jiang",
+      "Cheng Jing",
+      "Hongyang Li",
+      "Jialu Li",
+      "Chiming Liu",
+      "Yi Liu",
+      "Yuxiang Lu",
+      "Jianlan Luo",
+      "Ping Luo",
+      "Yao Mu",
+      "Yuehan Niu",
+      "Yixuan Pan",
+      "Jiangmiao Pang",
+      "Yu Qiao",
+      "Guanghui Ren",
+      "Cheng Ruan",
+      "Jiaqi Shan",
+      "Yongjian Shen",
+      "Chengshi Shi",
+      "Mingkang Shi",
+      "Modi Shi",
+      "Chonghao Sima",
+      "Jianheng Song",
+      "Huijie Wang",
+      "Wenhao Wang",
+      "Dafeng Wei",
+      "Chengen Xie",
+      "Guo Xu",
+      "Junchi Yan",
+      "Cunbiao Yang",
+      "Lei Yang",
+      "Shukai Yang",
+      "Maoqing Yao",
+      "Jia Zeng",
+      "Chi Zhang",
+      "Qinglin Zhang",
+      "Bin Zhao",
+      "Chengyue Zhao",
+      "Jiaqi Zhao",
+      "Jianchao Zhu"
+    ],
+    "sources": [
+      "DATA:gr2",
+      "PROFILES:unknown",
+      "SAVED_STATE:agibotworld",
+      "SAVED_STATE:n_agibotworldcol_12494"
+    ]
+  },
+  "2503.14734": {
+    "status": "authors_wrong",
+    "file_title": "GR00T N1",
+    "api_title": "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots",
+    "title_similarity": 0.22,
+    "correct_authors": [
+      "NVIDIA",
+      ":",
+      "Johan Bjorck",
+      "Fernando Castañeda",
+      "Nikita Cherniadev",
+      "Xingye Da",
+      "Runyu Ding",
+      "Linxi \"Jim\" Fan",
+      "Yu Fang",
+      "Dieter Fox",
+      "Fengyuan Hu",
+      "Spencer Huang",
+      "Joel Jang",
+      "Zhenyu Jiang",
+      "Jan Kautz",
+      "Kaushil Kundalia",
+      "Lawrence Lao",
+      "Zhiqi Li",
+      "Zongyu Lin",
+      "Kevin Lin",
+      "Guilin Liu",
+      "Edith Llontop",
+      "Loic Magne",
+      "Ajay Mandlekar",
+      "Avnish Narayan",
+      "Soroush Nasiriany",
+      "Scott Reed",
+      "You Liang Tan",
+      "Guanzhi Wang",
+      "Zu Wang",
+      "Jing Wang",
+      "Qi Wang",
+      "Jiannan Xiang",
+      "Yuqi Xie",
+      "Yinzhen Xu",
+      "Zhenjia Xu",
+      "Seonghyeon Ye",
+      "Zhiding Yu",
+      "Ao Zhang",
+      "Hao Zhang",
+      "Yizhou Zhao",
+      "Ruijie Zheng",
+      "Yuke Zhu"
+    ],
+    "file_authors": [
+      "NVIDIA Team（Johan Bjorck",
+      "Linxi Fan",
+      "Yuke Zhu",
+      "Ajay Mandlekar",
+      "Soroush Nasiriany",
+      "Ruijie Zheng",
+      "Zhenjia Xu",
+      "…共41人）"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 5,
+      "api_count": 43,
+      "file_count": 8,
+      "missing_from_file": [
+        ":",
+        "Ao Zhang",
+        "Avnish Narayan",
+        "Dieter Fox",
+        "Edith Llontop",
+        "Fengyuan Hu",
+        "Fernando Castañeda",
+        "Guanzhi Wang",
+        "Guilin Liu",
+        "Hao Zhang",
+        "Jan Kautz",
+        "Jiannan Xiang",
+        "Jing Wang",
+        "Joel Jang",
+        "Johan Bjorck",
+        "Kaushil Kundalia",
+        "Kevin Lin",
+        "Lawrence Lao",
+        "Linxi \"Jim\" Fan",
+        "Loic Magne",
+        "NVIDIA",
+        "Nikita Cherniadev",
+        "Qi Wang",
+        "Runyu Ding",
+        "Scott Reed",
+        "Seonghyeon Ye",
+        "Spencer Huang",
+        "Xingye Da",
+        "Yinzhen Xu",
+        "Yizhou Zhao",
+        "You Liang Tan",
+        "Yu Fang",
+        "Yuqi Xie",
+        "Zhenyu Jiang",
+        "Zhiding Yu",
+        "Zhiqi Li",
+        "Zongyu Lin",
+        "Zu Wang"
+      ],
+      "fabricated_in_file": [
+        "Linxi Fan",
+        "NVIDIA Team（Johan Bjorck",
+        "…共41人）"
+      ]
+    },
+    "sources": [
+      "DATA:groot",
+      "SAVED_STATE:groot",
+      "SAVED_STATE:n_grootn1isaacgr_33418",
+      "SAVED_STATE:n_gr00tn1isaacgr_40872"
+    ]
+  },
+  "2503.20020": {
+    "status": "authors_wrong",
+    "file_title": "Gemini Robotics",
+    "api_title": "Gemini Robotics: Bringing AI into the Physical World",
+    "title_similarity": 0.45,
+    "correct_authors": [
+      "Gemini Robotics Team",
+      "Saminda Abeyruwan",
+      "Joshua Ainslie",
+      "Jean-Baptiste Alayrac",
+      "Montserrat Gonzalez Arenas",
+      "Travis Armstrong",
+      "Ashwin Balakrishna",
+      "Robert Baruch",
+      "Maria Bauza",
+      "Michiel Blokzijl",
+      "Steven Bohez",
+      "Konstantinos Bousmalis",
+      "Anthony Brohan",
+      "Thomas Buschmann",
+      "Arunkumar Byravan",
+      "Serkan Cabi",
+      "Ken Caluwaerts",
+      "Federico Casarini",
+      "Oscar Chang",
+      "Jose Enrique Chen",
+      "Xi Chen",
+      "Hao-Tien Lewis Chiang",
+      "Krzysztof Choromanski",
+      "David D'Ambrosio",
+      "Sudeep Dasari",
+      "Todor Davchev",
+      "Coline Devin",
+      "Norman Di Palo",
+      "Tianli Ding",
+      "Adil Dostmohamed",
+      "Danny Driess",
+      "Yilun Du",
+      "Debidatta Dwibedi",
+      "Michael Elabd",
+      "Claudio Fantacci",
+      "Cody Fong",
+      "Erik Frey",
+      "Chuyuan Fu",
+      "Marissa Giustina",
+      "Keerthana Gopalakrishnan",
+      "Laura Graesser",
+      "Leonard Hasenclever",
+      "Nicolas Heess",
+      "Brandon Hernaez",
+      "Alexander Herzog",
+      "R. Alex Hofer",
+      "Jan Humplik",
+      "Atil Iscen",
+      "Mithun George Jacob",
+      "Deepali Jain",
+      "Ryan Julian",
+      "Dmitry Kalashnikov",
+      "M. Emre Karagozler",
+      "Stefani Karp",
+      "Chase Kew",
+      "Jerad Kirkland",
+      "Sean Kirmani",
+      "Yuheng Kuang",
+      "Thomas Lampe",
+      "Antoine Laurens",
+      "Isabel Leal",
+      "Alex X. Lee",
+      "Tsang-Wei Edward Lee",
+      "Jacky Liang",
+      "Yixin Lin",
+      "Sharath Maddineni",
+      "Anirudha Majumdar",
+      "Assaf Hurwitz Michaely",
+      "Robert Moreno",
+      "Michael Neunert",
+      "Francesco Nori",
+      "Carolina Parada",
+      "Emilio Parisotto",
+      "Peter Pastor",
+      "Acorn Pooley",
+      "Kanishka Rao",
+      "Krista Reymann",
+      "Dorsa Sadigh",
+      "Stefano Saliceti",
+      "Pannag Sanketi",
+      "Pierre Sermanet",
+      "Dhruv Shah",
+      "Mohit Sharma",
+      "Kathryn Shea",
+      "Charles Shu",
+      "Vikas Sindhwani",
+      "Sumeet Singh",
+      "Radu Soricut",
+      "Jost Tobias Springenberg",
+      "Rachel Sterneck",
+      "Razvan Surdulescu",
+      "Jie Tan",
+      "Jonathan Tompson",
+      "Vincent Vanhoucke",
+      "Jake Varley",
+      "Grace Vesom",
+      "Giulia Vezzani",
+      "Oriol Vinyals",
+      "Ayzaan Wahid",
+      "Stefan Welker",
+      "Paul Wohlhart",
+      "Fei Xia",
+      "Ted Xiao",
+      "Annie Xie",
+      "Jinyu Xie",
+      "Peng Xu",
+      "Sichun Xu",
+      "Ying Xu",
+      "Zhuo Xu",
+      "Yuxiang Yang",
+      "Rui Yao",
+      "Sergey Yaroshenko",
+      "Wenhao Yu",
+      "Wentao Yuan",
+      "Jingwei Zhang",
+      "Tingnan Zhang",
+      "Allan Zhou",
+      "Yuxiang Zhou"
+    ],
+    "file_authors": [
+      "Gemini Robotics Team（Google DeepMind，170+作者，核心：Chelsea Finn",
+      "Karol Hausman",
+      "Sergey Levine）"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 0,
+      "api_count": 118,
+      "file_count": 3,
+      "missing_from_file": [
+        "Acorn Pooley",
+        "Adil Dostmohamed",
+        "Alex X. Lee",
+        "Alexander Herzog",
+        "Allan Zhou",
+        "Anirudha Majumdar",
+        "Annie Xie",
+        "Anthony Brohan",
+        "Antoine Laurens",
+        "Arunkumar Byravan",
+        "Ashwin Balakrishna",
+        "Assaf Hurwitz Michaely",
+        "Atil Iscen",
+        "Ayzaan Wahid",
+        "Brandon Hernaez",
+        "Carolina Parada",
+        "Charles Shu",
+        "Chase Kew",
+        "Chuyuan Fu",
+        "Claudio Fantacci",
+        "Cody Fong",
+        "Coline Devin",
+        "Danny Driess",
+        "David D'Ambrosio",
+        "Debidatta Dwibedi",
+        "Deepali Jain",
+        "Dhruv Shah",
+        "Dmitry Kalashnikov",
+        "Dorsa Sadigh",
+        "Emilio Parisotto",
+        "Erik Frey",
+        "Federico Casarini",
+        "Fei Xia",
+        "Francesco Nori",
+        "Gemini Robotics Team",
+        "Giulia Vezzani",
+        "Grace Vesom",
+        "Hao-Tien Lewis Chiang",
+        "Isabel Leal",
+        "Jacky Liang",
+        "Jake Varley",
+        "Jan Humplik",
+        "Jean-Baptiste Alayrac",
+        "Jerad Kirkland",
+        "Jie Tan",
+        "Jingwei Zhang",
+        "Jinyu Xie",
+        "Jonathan Tompson",
+        "Jose Enrique Chen",
+        "Joshua Ainslie",
+        "Jost Tobias Springenberg",
+        "Kanishka Rao",
+        "Kathryn Shea",
+        "Keerthana Gopalakrishnan",
+        "Ken Caluwaerts",
+        "Konstantinos Bousmalis",
+        "Krista Reymann",
+        "Krzysztof Choromanski",
+        "Laura Graesser",
+        "Leonard Hasenclever",
+        "M. Emre Karagozler",
+        "Maria Bauza",
+        "Marissa Giustina",
+        "Michael Elabd",
+        "Michael Neunert",
+        "Michiel Blokzijl",
+        "Mithun George Jacob",
+        "Mohit Sharma",
+        "Montserrat Gonzalez Arenas",
+        "Nicolas Heess",
+        "Norman Di Palo",
+        "Oriol Vinyals",
+        "Oscar Chang",
+        "Pannag Sanketi",
+        "Paul Wohlhart",
+        "Peng Xu",
+        "Peter Pastor",
+        "Pierre Sermanet",
+        "R. Alex Hofer",
+        "Rachel Sterneck",
+        "Radu Soricut",
+        "Razvan Surdulescu",
+        "Robert Baruch",
+        "Robert Moreno",
+        "Rui Yao",
+        "Ryan Julian",
+        "Saminda Abeyruwan",
+        "Sean Kirmani",
+        "Sergey Yaroshenko",
+        "Serkan Cabi",
+        "Sharath Maddineni",
+        "Sichun Xu",
+        "Stefan Welker",
+        "Stefani Karp",
+        "Stefano Saliceti",
+        "Steven Bohez",
+        "Sudeep Dasari",
+        "Sumeet Singh",
+        "Ted Xiao",
+        "Thomas Buschmann",
+        "Thomas Lampe",
+        "Tianli Ding",
+        "Tingnan Zhang",
+        "Todor Davchev",
+        "Travis Armstrong",
+        "Tsang-Wei Edward Lee",
+        "Vikas Sindhwani",
+        "Vincent Vanhoucke",
+        "Wenhao Yu",
+        "Wentao Yuan",
+        "Xi Chen",
+        "Yilun Du",
+        "Ying Xu",
+        "Yixin Lin",
+        "Yuheng Kuang",
+        "Yuxiang Yang",
+        "Yuxiang Zhou",
+        "Zhuo Xu"
+      ],
+      "fabricated_in_file": [
+        "Gemini Robotics Team（Google DeepMind，170+作者，核心：Chelsea Finn",
+        "Karol Hausman",
+        "Sergey Levine）"
+      ]
+    },
+    "sources": [
+      "DATA:geminirobot",
+      "PROFILES:unknown",
+      "SAVED_STATE:geminirobot"
+    ]
+  },
+  "2504.18904": {
+    "status": "authors_wrong",
+    "file_title": "RoboVerse",
+    "api_title": "RoboVerse: Towards a Unified Platform, Dataset and Benchmark for Scalable and Generalizable Robot Learning",
+    "title_similarity": 0.16,
+    "correct_authors": [
+      "Haoran Geng",
+      "Feishi Wang",
+      "Songlin Wei",
+      "Yuyang Li",
+      "Bangjun Wang",
+      "Boshi An",
+      "Charlie Tianyue Cheng",
+      "Haozhe Lou",
+      "Peihao Li",
+      "Yen-Jen Wang",
+      "Yutong Liang",
+      "Dylan Goetting",
+      "Chaoyi Xu",
+      "Haozhe Chen",
+      "Yuxi Qian",
+      "Yiran Geng",
+      "Jiageng Mao",
+      "Weikang Wan",
+      "Mingtong Zhang",
+      "Jiangran Lyu",
+      "Siheng Zhao",
+      "Jiazhao Zhang",
+      "Jialiang Zhang",
+      "Chengyang Zhao",
+      "Haoran Lu",
+      "Yufei Ding",
+      "Ran Gong",
+      "Yuran Wang",
+      "Yuxuan Kuang",
+      "Ruihai Wu",
+      "Baoxiong Jia",
+      "Carlo Sferrazza",
+      "Hao Dong",
+      "Siyuan Huang",
+      "Yue Wang",
+      "Jitendra Malik",
+      "Pieter Abbeel"
+    ],
+    "file_authors": [
+      "Haoran Geng",
+      "Feishi Wang",
+      "Songlin Wei",
+      "Yuyang Li",
+      "Bangjun Wang",
+      "Boshi An",
+      "Charlie Tianyue Cheng",
+      "Haichao Zhang",
+      "Peihao Chen",
+      "Yen-Jen Wang",
+      "Yutong Liang",
+      "Dylan Goetting",
+      "Chunru Lin",
+      "Xiaolong Wang",
+      "Hao Su",
+      "Pieter Abbeel",
+      "Jitendra Malik"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 12,
+      "api_count": 37,
+      "file_count": 17,
+      "missing_from_file": [
+        "Baoxiong Jia",
+        "Carlo Sferrazza",
+        "Chaoyi Xu",
+        "Chengyang Zhao",
+        "Hao Dong",
+        "Haoran Lu",
+        "Haozhe Chen",
+        "Haozhe Lou",
+        "Jiageng Mao",
+        "Jialiang Zhang",
+        "Jiangran Lyu",
+        "Jiazhao Zhang",
+        "Mingtong Zhang",
+        "Peihao Li",
+        "Ran Gong",
+        "Ruihai Wu",
+        "Siheng Zhao",
+        "Siyuan Huang",
+        "Weikang Wan",
+        "Yiran Geng",
+        "Yue Wang",
+        "Yufei Ding",
+        "Yuran Wang",
+        "Yuxi Qian",
+        "Yuxuan Kuang"
+      ],
+      "fabricated_in_file": [
+        "Chunru Lin",
+        "Haichao Zhang",
+        "Hao Su",
+        "Peihao Chen",
+        "Xiaolong Wang"
+      ]
+    },
+    "sources": [
+      "SAVED_STATE:n_roboverse_33418"
+    ]
+  },
+  "2506.01844": {
+    "status": "authors_wrong",
+    "file_title": "SmolVLA",
+    "api_title": "SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics",
+    "title_similarity": 0.17,
+    "correct_authors": [
+      "Mustafa Shukor",
+      "Dana Aubakirova",
+      "Francesco Capuano",
+      "Pepijn Kooijmans",
+      "Steven Palma",
+      "Adil Zouitine",
+      "Michel Aractingi",
+      "Caroline Pascal",
+      "Martino Russi",
+      "Andres Marafioti",
+      "Simon Alibert",
+      "Matthieu Cord",
+      "Thomas Wolf",
+      "Remi Cadene"
+    ],
+    "file_authors": [
+      "Pepijn Holla",
+      "Mathieu Rita",
+      "Nicolas Brousse",
+      "Andres Marafioti",
+      "Remi Cadene",
+      "Simon Alibert",
+      "Alexander Soare",
+      "Thomas Wolf",
+      "Elie Bakouch"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 4,
+      "api_count": 14,
+      "file_count": 9,
+      "missing_from_file": [
+        "Adil Zouitine",
+        "Caroline Pascal",
+        "Dana Aubakirova",
+        "Francesco Capuano",
+        "Martino Russi",
+        "Matthieu Cord",
+        "Michel Aractingi",
+        "Mustafa Shukor",
+        "Pepijn Kooijmans",
+        "Steven Palma"
+      ],
+      "fabricated_in_file": [
+        "Alexander Soare",
+        "Elie Bakouch",
+        "Mathieu Rita",
+        "Nicolas Brousse",
+        "Pepijn Holla"
+      ]
+    },
+    "sources": [
+      "DATA:smolvla",
+      "SAVED_STATE:smolvla"
+    ]
+  },
+  "2507.05240": {
+    "status": "authors_wrong",
+    "file_title": "StreamVLN",
+    "api_title": "StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling",
+    "title_similarity": 0.21,
+    "correct_authors": [
+      "Meng Wei",
+      "Chenyang Wan",
+      "Xiqian Yu",
+      "Tai Wang",
+      "Yuqiang Yang",
+      "Xiaohan Mao",
+      "Chenming Zhu",
+      "Wenzhe Cai",
+      "Hanqing Wang",
+      "Yilun Chen",
+      "Xihui Liu",
+      "Jiangmiao Pang"
+    ],
+    "file_authors": [
+      "Meng Wei",
+      "Chenyang Wan",
+      "Xiqian Yu",
+      "Tai Wang",
+      "Yuqiang Yang",
+      "Xiaohan Mao",
+      "Chenming Zhu",
+      "Wenzhe Cai",
+      "Hanqing Wang",
+      "Yilun Chen",
+      "…（MSRA + 上海AILab）"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 10,
+      "api_count": 12,
+      "file_count": 11,
+      "missing_from_file": [
+        "Jiangmiao Pang",
+        "Xihui Liu"
+      ],
+      "fabricated_in_file": [
+        "…（MSRA + 上海AILab）"
+      ]
+    },
+    "sources": [
+      "DATA:streamvln",
+      "SAVED_STATE:streamvln"
+    ]
+  },
+  "2509.09674": {
+    "status": "id_wrong_related",
+    "file_title": "Moo Jin Kim",
+    "api_title": "SimpleVLA-RL: Scaling VLA Training via Reinforcement Learning",
+    "suggested_id": null,
+    "correct_authors_for_this_id": [
+      "Haozhan Li",
+      "Yuxin Zuo",
+      "Jiale Yu",
+      "Yuhao Zhang",
+      "Zhaohui Yang",
+      "Kaiyan Zhang",
+      "Xuekai Zhu",
+      "Yuchen Zhang",
+      "Tianxing Chen",
+      "Ganqu Cui",
+      "Dehui Wang",
+      "Dingxiang Luo",
+      "Yuchen Fan",
+      "Youbang Sun",
+      "Jia Zeng",
+      "Jiangmiao Pang",
+      "Shanghang Zhang",
+      "Yu Wang",
+      "Yao Mu",
+      "Bowen Zhou",
+      "Ning Ding"
+    ],
+    "sources": [
+      "DATA:act",
+      "PROFILES:unknown",
+      "SAVED_STATE:simplevlarl"
+    ]
+  },
+  "2509.22642": {
+    "status": "authors_wrong",
+    "file_title": "WoW",
+    "api_title": "WoW: Towards a World omniscient World model Through Embodied Interaction",
+    "title_similarity": 0.08,
+    "correct_authors": [
+      "Xiaowei Chi",
+      "Peidong Jia",
+      "Chun-Kai Fan",
+      "Xiaozhu Ju",
+      "Weishi Mi",
+      "Kevin Zhang",
+      "Zhiyuan Qin",
+      "Wanxin Tian",
+      "Kuangzhi Ge",
+      "Hao Li",
+      "Zezhong Qian",
+      "Anthony Chen",
+      "Qiang Zhou",
+      "Yueru Jia",
+      "Jiaming Liu",
+      "Yong Dai",
+      "Qingpo Wuwu",
+      "Chengyu Bai",
+      "Yu-Kai Wang",
+      "Ying Li",
+      "Lizhang Chen",
+      "Yong Bao",
+      "Zhiyuan Jiang",
+      "Jiacheng Zhu",
+      "Kai Tang",
+      "Ruichuan An",
+      "Yulin Luo",
+      "Qiuxuan Feng",
+      "Siyuan Zhou",
+      "Chi-min Chan",
+      "Chengkai Hou",
+      "Wei Xue",
+      "Sirui Han",
+      "Yike Guo",
+      "Shanghang Zhang",
+      "Jian Tang"
+    ],
+    "file_authors": [
+      "Xiaowei Chi*",
+      "Peidong Jia*",
+      "Chun-Kai Fan*",
+      "Xiaozhu Ju*",
+      "Weishi Mi*",
+      "Kevin Zhang",
+      "Zhiyuan Qin",
+      "Wanxin Tian",
+      "Kuangzhi Ge",
+      "Hao Li",
+      "…（北京人形机器人创新中心 + 北京大学 + HKUST，共36人）"
+    ],
+    "diff": {
+      "match": false,
+      "overlap_count": 5,
+      "api_count": 36,
+      "file_count": 11,
+      "missing_from_file": [
+        "Anthony Chen",
+        "Chengkai Hou",
+        "Chengyu Bai",
+        "Chi-min Chan",
+        "Chun-Kai Fan",
+        "Jiacheng Zhu",
+        "Jiaming Liu",
+        "Jian Tang",
+        "Kai Tang",
+        "Lizhang Chen",
+        "Peidong Jia",
+        "Qiang Zhou",
+        "Qingpo Wuwu",
+        "Qiuxuan Feng",
+        "Ruichuan An",
+        "Shanghang Zhang",
+        "Sirui Han",
+        "Siyuan Zhou",
+        "Wei Xue",
+        "Weishi Mi",
+        "Xiaowei Chi",
+        "Xiaozhu Ju",
+        "Yike Guo",
+        "Ying Li",
+        "Yong Bao",
+        "Yong Dai",
+        "Yu-Kai Wang",
+        "Yueru Jia",
+        "Yulin Luo",
+        "Zezhong Qian",
+        "Zhiyuan Jiang"
+      ],
+      "fabricated_in_file": [
+        "Chun-Kai Fan*",
+        "Peidong Jia*",
+        "Weishi Mi*",
+        "Xiaowei Chi*",
+        "Xiaozhu Ju*",
+        "…（北京人形机器人创新中心 + 北京大学 + HKUST，共36人）"
+      ]
+    },
+    "sources": [
+      "DATA:wow",
+      "PROFILES:unknown",
+      "SAVED_STATE:wow"
+    ]
+  },
+  "2602.03310": {
+    "status": "correct",
+    "api_title": "RDT2: Exploring the Scaling Limit of UMI Data Towards Zero-Shot Cross-Embodiment Generalization",
+    "sources": [
+      "PROFILES:unknown"
+    ]
+  },
+  "__stats__": {
+    "total": 99,
+    "correct": 19,
+    "authors_wrong": 31,
+    "id_mismatch": 47,
+    "not_found": 2
+  }
+}
