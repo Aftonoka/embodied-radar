@@ -7692,15 +7692,17 @@ async function runTalentScanTerminal(knownCount){
 
 
 async function runTalentScan(){
+  console.log('[TalentScan] START');
   if(!AUTH_TOKEN){
     setStat('var(--co)','NO AUTH','请在 HTML 文件顶部填入 AUTH_TOKEN（ai-nexus 的 X-Auth-Token）后重试');
     document.getElementById('stat').style.display='flex';
     return;
   }
+  console.log('[TalentScan] AUTH_TOKEN ok, len='+AUTH_TOKEN.length);
   const btn=document.getElementById('tscan-btn-hdr');
   const dot=document.getElementById('tscan-dot-hdr');
   const txt=document.getElementById('tscan-txt-hdr')||{textContent:'',style:{}};
-  if(btn.disabled)return;
+  if(btn.disabled){console.log('[TalentScan] ABORT: btn already disabled');return;}
   btn.disabled=true;
   btn.style.opacity='.6';
   dot.style.animation='pulse .7s ease-in-out infinite';
@@ -7712,9 +7714,12 @@ async function runTalentScan(){
   const prompt=TALENT_CRITERIA+`
 
 已知人才库名单（请勿重复）：${known}`;
+  console.log('[TalentScan] prompt built, len='+prompt.length+', URL='+ANTHROPIC_PROXY_URL);
 
   try{
+    console.log('[TalentScan] calling fetch...');
     const res=await fetch(ANTHROPIC_PROXY_URL,{method:'POST',headers:{'Content-Type':'application/json','X-Auth-Token':AUTH_TOKEN},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:8000,messages:[{role:'user',content:prompt}]})});
+    console.log('[TalentScan] fetch done, status='+res.status);
     let body;try{body=await res.json();}catch(e){throw new Error('响应解析失败');}
     if(!res.ok)throw new Error(`HTTP ${res.status}: ${body?.error?.message||''}`);
     // Collect all text blocks
@@ -7766,9 +7771,10 @@ async function runTalentScan(){
     txt.textContent=`👤 +${added}`;
   }catch(e){
     txt.textContent='👤 失败'; resetScanProgress();
-    console.error('talent scan error:',e.message||e);
+    console.error('[TalentScan] CATCH error:',e.message||e, e);
     setTimeout(()=>{txt.textContent='👤 人才';},3000);
   }finally{
+    console.log('[TalentScan] FINALLY');
     btn.disabled=false;
     btn.style.opacity='1';
     dot.style.animation='';
