@@ -1182,10 +1182,14 @@ svg.spark{overflow:visible}
 </div>
 <div class="stat" id="stat"></div>
 <div class="search-bar">
-  <input class="search-input" id="search-input" type="text" placeholder="搜索人名（中/英）、技术词汇... 例：陈天行 / VLA / World Model / Stanford" oninput="onSearch(this.value)" autocomplete="off">
+  <input class="search-input" id="search-input" type="text" placeholder="搜索或AI查找新框架/人才... 例：陈天行 / VLA / World Model / Stanford" oninput="onSearch(this.value)" autocomplete="off">
   <button class="search-clear" id="search-clear" onclick="clearSearch()">×</button>
 </div>
 <div class="search-results-count" id="search-count"></div>
+<div id="ai-search-bar" style="display:none;padding:0 16px 8px;text-align:center">
+  <button id="ai-search-btn" onclick="aiSearch()" style="background:linear-gradient(135deg,#7c6af7,#58c4dc);color:#fff;border:none;border-radius:20px;padding:6px 18px;font-size:11px;font-family:var(--sa);cursor:pointer;font-weight:600;transition:all .2s">🔍 用AI搜索「<span id="ai-search-query"></span>」并添加</button>
+  <div id="ai-search-status" style="font-size:10px;color:var(--tx3);margin-top:4px;display:none"></div>
+</div>
 <div class="view-tabs">
   <button class="view-tab on" id="vtab-radar" onclick="switchView('radar')">📊 框架雷达<span id="tab-count-radar" style="font-size:9px;font-family:var(--mo);opacity:.6;margin-left:4px">(108)</span></button>
   <button class="view-tab" id="vtab-people" onclick="switchView('people')">👥 人才库<span id="tab-count-people" style="font-size:9px;font-family:var(--mo);opacity:.6;margin-left:4px">(89)</span></button>
@@ -6636,7 +6640,7 @@ ${CRITERIA}
 优先级：2024-2025年新发布 > 更早期（同等质量下新work排前）。
 ${JSON_FORMAT}`;
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json',...(ANTHROPIC_API_KEY?{'x-api-key':ANTHROPIC_API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'}:{})},body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:3000,messages:[{role:'user',content:prompt}]})});
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json',...(ANTHROPIC_API_KEY?{'x-api-key':ANTHROPIC_API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'}:{})},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:3000,messages:[{role:'user',content:prompt}]})});
     let body;try{body=await res.json();}catch(e){throw new Error(`HTTP ${res.status}`);}
     if(!res.ok) throw new Error(`HTTP ${res.status}: ${body?.error?.message||''}`);
     const block=(body.content||[]).find(c=>c.type==='text');
@@ -7578,19 +7582,41 @@ function refreshAllLiveData() {
 
 
 // ── Talent Scan ──
-var TALENT_CRITERIA = `你是具身智能/机器人领域华人青年学者猎头AI。从训练知识中找出符合条件、不在已知名单中的候选人。
+var TALENT_CRITERIA = `你是具身智能/机器人领域华人青年学者猎头AI。从训练知识中找出符合条件、不在已知名单中的候选人（2023-2025年活跃）。
 
-【条件（命中任一）】
-- 清华特奖/北大年度人物/郭沫若奖学金/商汤奖学金/字节奖学金获得者
-- 博士在读或毕业≤3年，Google Scholar引用≥500
-- 白名单实验室(王鹤EPIC/陈建宇ISR/高阳/许华哲TEA/杨耀东MARL/朱军TSAIL/鲁继文/丁宁/Abbeel BAIR/Hao Su UCSD)的顶会一作
-- 24个月内≥3篇顶会一作
-- GitHub Stars≥300的具身智能项目作者
+═══ 人才库 — 入选通道（无Stars门槛，命中任一即入库）═══
 
-【排除】非华人、已在名单中、1989年前出生
+T1 精英荣誉：清华特等奖学金/北大年度人物/郭沫若奖学金/商汤奖学金/字节奖学金（近3年）；姚班图灵班+任意顶会一作；国自然青年学生基金
 
-【输出】只输出JSON数组，3位候选人：
-[{"name":"英文名","name_zh":"中文名","birth_year":"~2001","institution":"机构","advisor":"导师","citations":"引用数","rep_paper":"代表论文","awards":"荣誉","reason":"30字理由","homepage":"URL","github":"repo URL","email":"邮箱","twitter":"URL","social_connections":["合作者名"]}]
+T2 引用速度：博士在读或毕业≤3年，Scholar引用≥500；或arXiv≤1年引用≥100
+
+T3 白名单实验室顶会一作/共一：王鹤EPIC Lab(北大)、陈建宇ISRLab(清华IIIS)、高阳组(清华IIIS/千寻智能)、许华哲TEA Lab(清华IIIS/星海图)、杨耀东MARL Lab(北大)、朱军TSAIL(清华)、鲁继文组(清华自动化)、丁宁组(清华EE)、Abbeel/Malik/Efros BAIR(Berkeley)、Hao Su组(UCSD/Hillbot)、Shuran Song(Columbia/Stanford)、Chelsea Finn(Stanford)、Sergey Levine RAIL(Berkeley)；顶会=RSS/ICRA/CoRL/NeurIPS/ICLR/CVPR/IROS/ECCV/ICCV
+
+T4 高产密度：24个月内同一华人≥3篇上述顶会一作
+
+T5 国家级创新中心：北京/上海/深圳人形机器人创新中心的具身智能一作
+
+T6 WAIC云帆奖/EAI-100学术新锐20入选者
+
+T7 新论文速效：顶会≤12月+Stars≥300或引用增速显著
+
+T8 跨界高潜：非学术路径但GitHub Stars≥1000+转向具身智能
+
+═══ 高潜创业者 — 判定信号（满足≥3条标⭐）═══
+
+F1 基础设施意识：做过platform/framework/dataset/benchmark/simulator
+F2 社区牵引力：GitHub Stars≥500
+F3 跨模态整合：横跨≥2个子领域(操控/导航/世界模型/VLA/运动控制/数据/仿真)
+F4 学术代际影响：引用≥300
+F5 窗口期：PhD在读或毕业≤3年，未入大厂
+F6 白名单实验室创业基因：BAIR/TSAIL/EPIC/TEA/高阳/陈建宇/Hillbot/RAIL/Chelsea Finn
+
+请在返回的JSON中标注每人命中的通道(T1-T8)和创业信号(F1-F6)。
+
+【排除】非华人一律排除(Abbeel/Finn/Levine等外籍PI不收录)；已在名单中；1989年前出生
+
+【输出】只输出JSON数组，目标8位候选人（与已知名单重复则跳过，实际可少于8）：
+[{"name":"英文名","name_zh":"中文名","birth_year":"~2001","institution":"机构","advisor":"导师","citations":"引用数","hit_channel":"T3","founder_signals":"F1,F3,F4","rep_paper":"代表论文(含会议,最多2篇)","awards":"荣誉","reason":"30字理由","homepage":"URL","github":"repo URL(owner/repo格式)","email":"邮箱","twitter":"URL","social_connections":["合作者英文名"]}]
 
 只输出JSON。第一个字符[，最后一个字符]。不要代码块。
 `;
@@ -7685,7 +7711,7 @@ async function runTalentScan(){
 已知人才库名单（请勿重复）：${known}`;
 
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json',...(ANTHROPIC_API_KEY?{'x-api-key':ANTHROPIC_API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'}:{})},body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:2000,messages:[{role:'user',content:prompt}]})});
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json',...(ANTHROPIC_API_KEY?{'x-api-key':ANTHROPIC_API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'}:{})},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:8000,messages:[{role:'user',content:prompt}]})});
     let body;try{body=await res.json();}catch(e){throw new Error('响应解析失败');}
     if(!res.ok)throw new Error(`HTTP ${res.status}: ${body?.error?.message||''}`);
     // Collect all text blocks
@@ -7996,6 +8022,14 @@ var searchQuery = '';
 function onSearch(val) {
   searchQuery = val.trim().toLowerCase();
   document.getElementById('search-clear').style.display = searchQuery ? 'block' : 'none';
+  // Show/hide AI search bar
+  const aiBar = document.getElementById('ai-search-bar');
+  if(searchQuery && searchQuery.length >= 2) {
+    aiBar.style.display = 'block';
+    document.getElementById('ai-search-query').textContent = val.trim();
+  } else {
+    aiBar.style.display = 'none';
+  }
   applySearch();
 }
 
@@ -8003,7 +8037,201 @@ function clearSearch() {
   document.getElementById('search-input').value = '';
   searchQuery = '';
   document.getElementById('search-clear').style.display = 'none';
+  document.getElementById('ai-search-bar').style.display = 'none';
+  document.getElementById('ai-search-status').style.display = 'none';
   applySearch();
+}
+
+async function aiSearch() {
+  const query = document.getElementById('search-input').value.trim();
+  if(!query || !ANTHROPIC_API_KEY) return;
+  
+  const btn = document.getElementById('ai-search-btn');
+  const status = document.getElementById('ai-search-status');
+  btn.disabled = true;
+  btn.style.opacity = '.5';
+  btn.textContent = '🔍 搜索中...';
+  status.style.display = 'block';
+  status.textContent = '正在用 AI 搜索「' + query + '」...';
+  status.style.color = '#f5a623';
+  
+  const isPeople = document.getElementById('people-view').style.display !== 'none';
+  
+  try {
+    let prompt, maxTok;
+    if (isPeople) {
+      // People search
+      const knownNames = EXTRA_PEOPLE.map(p=>p.name).concat(Object.values(PROFILES).map(p=>p.name)).filter(Boolean);
+      prompt = `在具身智能/机器人领域中，搜索与「${query}」相关的华人青年学者（1990年后出生）。
+可能是人名、实验室名、学校名、研究方向、论文名。
+
+已知名单（勿重复）：${knownNames.slice(0,50).join('、')}
+
+返回所有匹配的学者（1-5位），只输出JSON数组：
+[{"name":"英文名","name_zh":"中文名","birth_year":"~2001","institution":"机构","advisor":"导师","citations":"引用数","rep_paper":"代表论文","awards":"荣誉","reason":"30字理由","homepage":"URL","github":"repo URL","email":"邮箱","twitter":"URL","social_connections":["合作者名"]}]
+
+只输出JSON。第一个字符[，最后一个字符]。不要代码块。如无匹配返回[]。`;
+      maxTok = 4000;
+    } else {
+      // Framework search
+      const knownFw = DATA.map(d=>d.name).concat(pending.map(d=>d.name));
+      prompt = `在具身智能/机器人领域中，搜索与「${query}」相关的开源框架/论文项目。
+可能是项目名、作者名、技术方向、论文关键词。必须有GitHub开源代码。
+
+已收录：${knownFw.join('、')}
+
+返回匹配的项目（1-3个），只输出JSON数组：
+[{"name":"项目名","year":"年份","cat":"sim/policy/general/data/world/nav",
+"tags":["顶会","年份"],"first_author":"一作英文名","first_author_zh":"中文名或null",
+"arxiv":"arXiv ID或null","all_authors":["前5作者"],
+"p":1-5,"e":1-5,"a":1-5,
+"note":"一句中文说明","signal_rank":"paradigm/increment/infra/closing",
+"signal_problem":"核心问题15字","signal_text":"行业意义2句",
+"startup":"yes/no","startup_why":"创业机会",
+"profile":{"name":"一作","name_zh":"中文名","birth_year":"~199X","current_role":"职位+机构","advisor":"导师","citations":"引用数","scholar":"Scholar URL","github_repo":"owner/repo","stars":"Stars数","ss_name":"Semantic Scholar名","education":"教育路径","industry":"产业经历","top_venues":["顶会"],"awards":["奖项"],"rep_papers":["论文"],"special_tags":["标签"]}
+}]
+
+只输出JSON。第一个字符[，最后一个字符]。不要代码块。如无匹配返回[]。`;
+      maxTok = 3000;
+    }
+    
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: maxTok,
+        messages: [{role:'user', content: prompt}]
+      })
+    });
+    
+    const body = await res.json();
+    if(!res.ok) throw new Error(body?.error?.message || 'API error');
+    
+    const text = (body.content||[]).filter(b=>b.type==='text').map(b=>b.text).join('');
+    const cleaned = repairJSON(text);
+    const match = cleaned.match(/\[[\s\S]*\]/);
+    if(!match) throw new Error('未找到JSON');
+    
+    let items;
+    try { items = JSON.parse(match[0]); } catch(e) {
+      // Salvage individual objects
+      const salvaged = [];
+      let depth=0, inStr=false, esc=false, start=-1;
+      for(let i=0;i<match[0].length;i++){
+        const ch=match[0][i];
+        if(esc){esc=false;continue;}
+        if(ch==='\\'&&inStr){esc=true;continue;}
+        if(ch==='"')inStr=!inStr;
+        if(!inStr){
+          if(ch==='{'){if(depth===0)start=i;depth++;}
+          else if(ch==='}'){depth--;if(depth===0&&start>=0){
+            try{salvaged.push(JSON.parse(match[0].slice(start,i+1)));}catch(e2){}
+            start=-1;
+          }}
+        }
+      }
+      items = salvaged;
+    }
+    
+    if(!items || items.length === 0) {
+      status.textContent = '未找到与「' + query + '」匹配的新结果';
+      status.style.color = '#f0714a';
+      btn.textContent = '🔍 用AI搜索「' + query + '」并添加';
+      btn.disabled = false;
+      btn.style.opacity = '1';
+      return;
+    }
+    
+    let addedCount = 0;
+    
+    if (isPeople) {
+      // Add people
+      items.forEach(p => {
+        if(p && p.name) {
+          addTalentToPool(p);
+          addedCount++;
+        }
+      });
+      if(addedCount > 0) {
+        persistTalent();
+        renderPeople();
+        updateFilterCounts();
+      }
+    } else {
+      // Add frameworks
+      const CO = ['sim','policy','general','data','world','nav'];
+      const existNames = new Set(DATA.map(d=>d.name.toLowerCase().replace(/\s/g,'')));
+      const newFw = items.filter(x=>x&&x.name&&!existNames.has(x.name.toLowerCase().replace(/\s/g,''))).map(x=>({
+        id:'s_'+x.name.toLowerCase().replace(/[^a-z0-9]/g,'').slice(0,14)+'_'+(Date.now()%100000),
+        cat:CO.includes(x.cat)?x.cat:'general',
+        name:x.name, year:x.year||'2025',
+        authors:{first:x.first_author||'未知',first_zh:x.first_author_zh||null,arxiv:x.arxiv||x.arxiv_id||null,
+          all:Array.isArray(x.all_authors)?x.all_authors:[x.first_author||'未知']},
+        tags:Array.isArray(x.tags)?x.tags:[],
+        p:Math.min(5,Math.max(1,parseInt(x.p)||3)),
+        e:Math.min(5,Math.max(1,parseInt(x.e)||3)),
+        a:Math.min(5,Math.max(1,parseInt(x.a)||3)),
+        isNew:true, note:x.note||'',
+        _profile:x.profile||null,
+        _analysis:x.signal_rank?{problem:x.signal_problem||'',rank:x.signal_rank||'increment',text:x.signal_text||'',startup:x.startup||'no',startup_why:x.startup_why||''}:null,
+        analysis:x.signal_rank?{problem:x.signal_problem||'',rank:x.signal_rank||'increment',text:x.signal_text||'',startup:x.startup||'no',startup_why:x.startup_why||''}:null
+      }));
+      newFw.forEach(fw => {
+        DATA.push(fw);
+        // Build profile
+        if(!PROFILES[fw.id] && fw._profile) {
+          const pr = fw._profile;
+          PROFILES[fw.id] = {
+            name:pr.name||fw.authors?.first||'', name_zh:pr.name_zh||null,
+            birth_year:pr.birth_year||null, current_role:pr.current_role||'',
+            advisor:pr.advisor||'—', citations:pr.citations||'—',
+            scholar:pr.scholar||null, github_repo:pr.github_repo||null,
+            ss_name:pr.ss_name||pr.name||'', education:pr.education||'',
+            industry:pr.industry||'—', top_venues:pr.top_venues||[],
+            awards:pr.awards||['—'], rep_papers:pr.rep_papers||['—'],
+            special_tags:pr.special_tags||[], analysis:fw._analysis||null
+          };
+        }
+        if(!PROFILES[fw.id]) {
+          PROFILES[fw.id] = {
+            name:fw.authors?.first||fw.name||'', name_zh:fw.authors?.first_zh||null,
+            current_role:fw.note||'—', advisor:'—', citations:'—',
+            ss_name:fw.authors?.first||'', education:'', industry:'—',
+            top_venues:[], awards:['—'], rep_papers:[fw.name], special_tags:[],
+            analysis:fw._analysis||null
+          };
+        }
+        addedCount++;
+      });
+      if(addedCount > 0) {
+        persist();
+        render();
+        updateFilterCounts();
+      }
+    }
+    
+    status.textContent = addedCount > 0
+      ? '✅ 成功添加 ' + addedCount + ' 个新' + (isPeople?'人才':'框架') + '！'
+      : '所有结果已存在，无新增';
+    status.style.color = addedCount > 0 ? '#3dd68c' : '#f5a623';
+    
+    // Re-apply search to highlight new items
+    if(addedCount > 0) setTimeout(()=>applySearch(), 300);
+    
+  } catch(e) {
+    status.textContent = '❌ 搜索失败: ' + e.message;
+    status.style.color = '#f0714a';
+  }
+  
+  btn.textContent = '🔍 用AI搜索「' + query + '」并添加';
+  btn.disabled = false;
+  btn.style.opacity = '1';
 }
 
 function applySearch() {
